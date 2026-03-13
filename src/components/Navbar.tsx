@@ -9,12 +9,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
+    { href: "/", label: t({ fr: "Accueil", en: "Home" }), isRoute: true },
+    { href: "/about", label: t(translations.nav.about), isRoute: true },
     { href: "#lab", label: t(translations.nav.lab) },
-    { href: "#aws", label: t(translations.nav.aws) },
     { href: "#projects", label: t(translations.nav.projects) },
-    { href: "#hybrid", label: t(translations.nav.hybrid) },
-    { href: "#certifications", label: t(translations.nav.certifications) },
-    { href: "#experience", label: t(translations.nav.experience) },
     { href: "#contact", label: t(translations.nav.contact) },
   ];
 
