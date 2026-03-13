@@ -93,9 +93,8 @@ const ContactSection = () => {
             className="flex flex-col justify-center gap-5"
           >
             {[
-              { icon: Mail, label: "alaeddine.hamadouche@email.com", href: "mailto:alaeddine.hamadouche@email.com" },
-              { icon: Linkedin, label: "LinkedIn", href: "#" },
-              { icon: Github, label: "GitHub", href: "#" },
+              { icon: Mail, label: "mus@hmdouche.com", href: "mailto:mus@hmdouche.com" },
+              { icon: Linkedin, label: "LinkedIn — Alaeddine Hamadouche", href: "https://linkedin.com/in/alaeddine-hamadouche-7681511b9" },
             ].map((item, i) => (
               <a
                 key={i}
@@ -109,7 +108,8 @@ const ContactSection = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="/cv-finance-alaeddine-hamadouche.pdf"
+              download
               className="glass rounded-xl p-4 flex items-center gap-4 group gradient-border hover:cyber-glow transition-all duration-300"
             >
               <Download size={22} className="text-accent" />
