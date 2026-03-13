@@ -108,7 +108,8 @@ const ContactSection = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="/cv-finance-alaeddine-hamadouche.pdf"
+              download
               className="glass rounded-xl p-4 flex items-center gap-4 group gradient-border hover:cyber-glow transition-all duration-300"
             >
               <Download size={22} className="text-accent" />
