@@ -14,6 +14,7 @@ const Navbar = () => {
     { href: "#projects", label: t(translations.nav.projects) },
     { href: "#experience", label: t(translations.nav.experience) },
     { href: "#lab", label: t(translations.nav.lab) },
+    { href: "#aws", label: "AWS Cloud" },
     { href: "#contact", label: t(translations.nav.contact) },
   ];
 
