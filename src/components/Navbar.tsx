@@ -15,6 +15,7 @@ const Navbar = () => {
     { href: "#experience", label: t(translations.nav.experience) },
     { href: "#lab", label: t(translations.nav.lab) },
     { href: "#aws", label: "AWS Cloud" },
+    { href: "#hybrid", label: t(translations.nav.hybrid) },
     { href: "#contact", label: t(translations.nav.contact) },
   ];
 
@@ -22,11 +23,11 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="font-heading text-xl font-bold gradient-text">
-          AM
+          AH
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <a
               key={l.href}

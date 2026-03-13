@@ -7,30 +7,36 @@ export const translations = {
     projects: { fr: "Projets", en: "Projects" },
     experience: { fr: "Parcours", en: "Experience" },
     lab: { fr: "Lab", en: "Lab" },
+    hybrid: { fr: "Profil Hybride", en: "Hybrid Profile" },
     contact: { fr: "Contact", en: "Contact" },
   },
   hero: {
-    name: { fr: "Alexandre Martin", en: "Alexandre Martin" },
+    name: { fr: "Alaeddine Hamadouche", en: "Alaeddine Hamadouche" },
     title: {
-      fr: "Étudiant en Administration et Sécurité des Systèmes et Réseaux",
-      en: "Student in System & Network Administration and Security",
+      fr: "Étudiant en Administration & Sécurité des Systèmes, Réseaux et Cloud",
+      en: "System, Network and Cloud Administration & Security Student",
     },
     tagline: {
-      fr: "Passionné par la cybersécurité, l'infrastructure réseau et la protection des systèmes d'information.",
-      en: "Passionate about cybersecurity, network infrastructure, and information systems protection.",
+      fr: "Profil hybride combinant cybersécurité, infrastructures réseau et analyse financière.",
+      en: "Hybrid profile combining cybersecurity, infrastructure engineering and financial analysis.",
     },
     cta1: { fr: "Voir les projets", en: "View Projects" },
     cta2: { fr: "Télécharger le CV", en: "Download CV" },
+    cta3: { fr: "Contact", en: "Contact" },
   },
   about: {
     title: { fr: "À propos", en: "About Me" },
     p1: {
-      fr: "Étudiant en administration et sécurité des systèmes et réseaux, je suis passionné par la cybersécurité et l'infrastructure IT. Mon objectif est de contribuer à sécuriser les systèmes d'information des entreprises face aux menaces croissantes.",
-      en: "As a student in system and network administration and security, I'm passionate about cybersecurity and IT infrastructure. My goal is to contribute to securing enterprise information systems against growing threats.",
+      fr: "Formation initiale en finance et comptabilité, puis reconversion vers l'administration système, réseau et la cybersécurité. Cette double compétence permet d'apporter une approche analytique forte aux problématiques techniques, notamment dans la gestion des risques, la sécurité des infrastructures et la compréhension des systèmes complexes.",
+      en: "Initial background in finance and accounting, followed by a career transition to system administration, networking, and cybersecurity. This dual expertise brings a strong analytical approach to technical challenges, particularly in risk management, infrastructure security, and complex systems understanding.",
     },
     p2: {
-      fr: "J'ai développé mes compétences à travers des projets pratiques en lab, des certifications, et une veille technologique constante. Je cherche à rejoindre une équipe où je pourrai mettre en pratique mes connaissances et continuer à apprendre.",
-      en: "I've developed my skills through hands-on lab projects, certifications, and constant technology monitoring. I'm looking to join a team where I can apply my knowledge and continue learning.",
+      fr: "Actuellement en formation en administration et sécurité des systèmes et réseaux, je développe mes compétences à travers des projets pratiques, des labs techniques et une veille technologique constante. Mon objectif est d'intégrer une équipe IT où je pourrai contribuer à la sécurisation des infrastructures.",
+      en: "Currently training in system and network administration and security, I develop my skills through hands-on projects, technical labs, and constant technology monitoring. My goal is to join an IT team where I can contribute to infrastructure security.",
+    },
+    journey: {
+      fr: ["Finance & Comptabilité", "Intérêt pour la technologie", "Formation Cybersécurité", "Administration Système & Cloud"],
+      en: ["Finance & Accounting", "Interest in Technology", "Cybersecurity Training", "System & Cloud Administration"],
     },
   },
   skills: {
@@ -38,6 +44,8 @@ export const translations = {
     networking: { fr: "Réseaux", en: "Networking" },
     sysadmin: { fr: "Administration Système", en: "System Administration" },
     security: { fr: "Cybersécurité", en: "Cybersecurity" },
+    cloud: { fr: "Cloud", en: "Cloud" },
+    finance: { fr: "Finance & Analyse", en: "Finance & Analytics" },
     tools: { fr: "Outils", en: "Tools" },
   },
   projects: {
@@ -69,18 +77,42 @@ export const translations = {
         tech: ["Debian", "iptables", "fail2ban", "Lynis"],
       },
       {
-        title: { fr: "Monitoring Réseau", en: "Network Monitoring Setup" },
+        title: { fr: "Infrastructure Cloud AWS", en: "AWS Cloud Infrastructure Basics" },
         desc: {
-          fr: "Déploiement d'une stack de monitoring avec Zabbix et Grafana pour surveiller l'infrastructure réseau et détecter les anomalies.",
-          en: "Deployed a monitoring stack with Zabbix and Grafana to monitor network infrastructure and detect anomalies.",
+          fr: "Déploiement d'une infrastructure cloud basique sur AWS avec EC2, S3, VPC et IAM pour comprendre les fondamentaux du cloud.",
+          en: "Deployed a basic cloud infrastructure on AWS with EC2, S3, VPC, and IAM to understand cloud fundamentals.",
         },
-        tech: ["Zabbix", "Grafana", "SNMP", "Docker"],
+        tech: ["AWS EC2", "S3", "VPC", "IAM"],
       },
     ],
   },
   timeline: {
-    title: { fr: "Formation & Expérience", en: "Education & Experience" },
+    title: { fr: "Formation & Parcours", en: "Education & Training" },
     items: [
+      {
+        year: "2025 - 2026",
+        title: {
+          fr: "Labs Cybersécurité — GoMyCode",
+          en: "Cybersecurity Labs — GoMyCode",
+        },
+        desc: {
+          fr: "6 checkpoints pratiques couvrant l'administration Linux, la reconnaissance réseau, la défense active, les menaces, l'architecture de sécurité et la cryptographie.",
+          en: "6 practical checkpoints covering Linux administration, network reconnaissance, active defense, threats, security architecture, and cryptography.",
+        },
+        type: "education" as const,
+      },
+      {
+        year: "2025",
+        title: {
+          fr: "Formation AWS Cloud Practitioner",
+          en: "AWS Cloud Practitioner Training",
+        },
+        desc: {
+          fr: "Formation aux fondamentaux du cloud AWS : architecture, services principaux, sécurité et bonnes pratiques.",
+          en: "Training on AWS cloud fundamentals: architecture, core services, security, and best practices.",
+        },
+        type: "certification" as const,
+      },
       {
         year: "2024 - 2026",
         title: {
@@ -94,28 +126,16 @@ export const translations = {
         type: "education" as const,
       },
       {
-        year: "2024",
+        year: "2020 - 2023",
         title: {
-          fr: "Stage - Administration Réseau",
-          en: "Internship - Network Administration",
+          fr: "Formation en Finance & Comptabilité",
+          en: "Finance & Accounting Degree",
         },
         desc: {
-          fr: "Stage en entreprise : maintenance réseau, support utilisateur, déploiement de postes et gestion Active Directory.",
-          en: "Corporate internship: network maintenance, user support, workstation deployment, and Active Directory management.",
+          fr: "Diplôme en finance et comptabilité. Développement de compétences analytiques, gestion des risques et interprétation des données.",
+          en: "Finance and accounting degree. Developed analytical skills, risk management, and data interpretation.",
         },
         type: "experience" as const,
-      },
-      {
-        year: "2023",
-        title: {
-          fr: "Certification Cisco CCNA - Introduction aux Réseaux",
-          en: "Cisco CCNA - Introduction to Networks",
-        },
-        desc: {
-          fr: "Certification couvrant les fondamentaux des réseaux : modèle OSI, TCP/IP, switching et routing de base.",
-          en: "Certification covering networking fundamentals: OSI model, TCP/IP, basic switching and routing.",
-        },
-        type: "certification" as const,
       },
     ],
   },
@@ -125,6 +145,47 @@ export const translations = {
       fr: "Déc. 2025 – Mars 2026 · 6 checkpoints validés · 100% progression",
       en: "Dec. 2025 – Mar. 2026 · 6 checkpoints validated · 100% progression",
     },
+  },
+  hybrid: {
+    title: { fr: "Cybersécurité × Finance", en: "Cybersecurity × Finance Mindset" },
+    subtitle: {
+      fr: "Comment mon parcours en finance renforce mon profil cybersécurité",
+      en: "How my finance background strengthens my cybersecurity profile",
+    },
+    items: [
+      {
+        finance: { fr: "Analyse des risques financiers", en: "Financial Risk Analysis" },
+        cyber: { fr: "Évaluation des risques de sécurité", en: "Security Risk Assessment" },
+        desc: {
+          fr: "La méthodologie d'analyse des risques financiers se transpose directement à l'évaluation des menaces et vulnérabilités des systèmes d'information.",
+          en: "Financial risk analysis methodology directly translates to evaluating threats and vulnerabilities in information systems.",
+        },
+      },
+      {
+        finance: { fr: "Analyse de données", en: "Data Analysis" },
+        cyber: { fr: "Analyse de logs & SIEM", en: "Log Analysis & SIEM" },
+        desc: {
+          fr: "L'habitude de traiter et interpréter de grands volumes de données financières facilite l'analyse des logs de sécurité et la détection d'anomalies.",
+          en: "Experience processing and interpreting large volumes of financial data facilitates security log analysis and anomaly detection.",
+        },
+      },
+      {
+        finance: { fr: "Rigueur & discipline", en: "Rigor & Discipline" },
+        cyber: { fr: "Investigation structurée d'incidents", en: "Structured Incident Investigation" },
+        desc: {
+          fr: "La rigueur acquise en comptabilité et audit s'applique naturellement à l'investigation méthodique d'incidents de sécurité.",
+          en: "The rigor acquired in accounting and auditing naturally applies to methodical security incident investigation.",
+        },
+      },
+      {
+        finance: { fr: "Conformité réglementaire", en: "Regulatory Compliance" },
+        cyber: { fr: "Conformité sécurité (ISO, RGPD)", en: "Security Compliance (ISO, GDPR)" },
+        desc: {
+          fr: "La compréhension des cadres réglementaires financiers facilite l'appropriation des normes de sécurité et de protection des données.",
+          en: "Understanding financial regulatory frameworks facilitates adoption of security standards and data protection norms.",
+        },
+      },
+    ],
   },
   contact: {
     title: { fr: "Contact", en: "Contact" },
