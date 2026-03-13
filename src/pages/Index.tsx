@@ -20,6 +20,7 @@ const Index = () => {
       <ProjectsSection />
       <TimelineSection />
       <TechLabSection />
+      <AwsCloudSection />
       <ContactSection />
       <footer className="relative z-10 py-8 text-center text-xs text-muted-foreground border-t border-border">
         © 2025 Alexandre Martin — Portfolio

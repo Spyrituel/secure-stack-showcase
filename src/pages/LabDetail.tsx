@@ -13,7 +13,7 @@ const LabDetail = () => {
   const navigate = useNavigate();
   const { lang, t } = useLanguage();
 
-  const lab = labs.find((l) => l.slug === slug);
+  const lab = labs.find((l) => l.slug === slug) || awsLabs.find((l) => l.slug === slug);
 
   if (!lab) {
     return (
