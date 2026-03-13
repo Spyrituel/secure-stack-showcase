@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index.tsx";
+import About from "./pages/About.tsx";
 import LabDetail from "./pages/LabDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
