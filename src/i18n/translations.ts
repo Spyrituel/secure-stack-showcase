@@ -21,6 +21,7 @@ export const translations = {
       en: "Hybrid profile combining cybersecurity, infrastructure engineering and financial analysis.",
     },
     cta1: { fr: "Voir les projets", en: "View Projects" },
+    ctaLabs: { fr: "Voir les labs techniques", en: "View Technical Labs" },
     cta2: { fr: "Télécharger le CV", en: "Download CV" },
     cta3: { fr: "Contact", en: "Contact" },
   },

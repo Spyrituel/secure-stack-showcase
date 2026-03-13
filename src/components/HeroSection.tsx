@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -28,27 +28,27 @@ const HeroSection = () => {
           <p className="text-muted-foreground text-base sm:text-lg max-w-lg mb-8 leading-relaxed">
             {t(translations.hero.tagline)}
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3">
             <a
-              href="#projects"
+              href="#lab"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
             >
               {t(translations.hero.cta1)}
               <ArrowDown size={16} />
             </a>
             <a
-              href="#"
+              href="#lab"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border"
+            >
+              {t(translations.hero.ctaLabs)}
+              <ArrowDown size={16} />
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
             >
               {t(translations.hero.cta2)}
               <Download size={16} />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
-            >
-              {t(translations.hero.cta3)}
-              <Mail size={16} />
             </a>
           </div>
         </motion.div>
