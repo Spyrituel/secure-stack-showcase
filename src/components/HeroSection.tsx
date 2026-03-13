@@ -25,8 +25,8 @@ const HeroSection = () => {
           <p className="text-lg sm:text-xl gradient-text font-heading font-medium mb-4">
             {t(translations.hero.title)}
           </p>
-          <p className="text-muted-foreground text-base sm:text-lg max-w-lg mb-8 leading-relaxed">
-            {t(translations.hero.tagline)}
+          <p className="text-muted-foreground text-sm sm:text-base max-w-lg mb-8 leading-relaxed">
+            {t(translations.hero.summary)}
           </p>
           <div className="flex flex-wrap gap-3">
             <a

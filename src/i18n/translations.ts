@@ -5,9 +5,11 @@ export const translations = {
     about: { fr: "À propos", en: "About" },
     skills: { fr: "Compétences", en: "Skills" },
     projects: { fr: "Projets", en: "Projects" },
-    experience: { fr: "Parcours", en: "Experience" },
-    lab: { fr: "Lab", en: "Lab" },
+    experience: { fr: "Formation", en: "Education" },
+    lab: { fr: "Labs Cyber", en: "Cyber Labs" },
+    aws: { fr: "Cloud AWS", en: "AWS Cloud" },
     hybrid: { fr: "Profil Hybride", en: "Hybrid Profile" },
+    certifications: { fr: "Certifications", en: "Certifications" },
     contact: { fr: "Contact", en: "Contact" },
   },
   hero: {
@@ -19,6 +21,10 @@ export const translations = {
     tagline: {
       fr: "Profil hybride combinant cybersécurité, infrastructures réseau et analyse financière.",
       en: "Hybrid profile combining cybersecurity, infrastructure engineering and financial analysis.",
+    },
+    summary: {
+      fr: "Étudiant en administration et sécurité des systèmes, réseaux et cloud avec une formation initiale en finance et analyse de données. Profil hybride combinant pensée analytique, gestion du risque et compétences techniques en infrastructures informatiques et cybersécurité.",
+      en: "System, network and cloud administration and security student with an initial background in finance and data analytics. Hybrid profile combining analytical thinking, risk management and technical skills in IT infrastructure and cybersecurity.",
     },
     cta1: { fr: "Voir les projets", en: "View Projects" },
     ctaLabs: { fr: "Voir les labs techniques", en: "View Technical Labs" },
@@ -36,8 +42,8 @@ export const translations = {
       en: "Currently training in system and network administration and security, I develop my skills through hands-on projects, technical labs, and constant technology monitoring. My goal is to join an IT team where I can contribute to infrastructure security.",
     },
     journey: {
-      fr: ["Finance & Comptabilité", "Intérêt pour la technologie", "Formation Cybersécurité", "Administration Système & Cloud"],
-      en: ["Finance & Accounting", "Interest in Technology", "Cybersecurity Training", "System & Cloud Administration"],
+      fr: ["Finance & Comptabilité", "Analyse de données", "Infrastructure IT", "Cybersécurité & Cloud"],
+      en: ["Finance & Accounting", "Data Analytics", "IT Infrastructure", "Cybersecurity & Cloud"],
     },
   },
   skills: {
@@ -88,94 +94,182 @@ export const translations = {
     ],
   },
   timeline: {
-    title: { fr: "Formation & Parcours", en: "Education & Training" },
+    title: { fr: "Formation & Parcours Académique", en: "Education & Academic Background" },
     items: [
       {
-        year: "2025 - 2026",
+        year: "2024 – 2026",
         title: {
-          fr: "Labs Cybersécurité — GoMyCode",
-          en: "Cybersecurity Labs — GoMyCode",
+          fr: "AEC — Gestion de Systèmes et Réseaux Informatiques",
+          en: "AEC — IT Systems and Network Management",
+        },
+        institution: {
+          fr: "Cégep de Sherbrooke (Programme délocalisé à INSIM Alger)",
+          en: "Cégep de Sherbrooke (Remote program at INSIM Algiers)",
         },
         desc: {
-          fr: "6 checkpoints pratiques couvrant l'administration Linux, la reconnaissance réseau, la défense active, les menaces, l'architecture de sécurité et la cryptographie.",
-          en: "6 practical checkpoints covering Linux administration, network reconnaissance, active defense, threats, security architecture, and cryptography.",
+          fr: "Programme technique orienté vers l'administration des systèmes informatiques, l'infrastructure réseau et la gestion des services IT dans les environnements professionnels.",
+          en: "Technical program focused on IT systems administration, network infrastructure and IT service management in professional environments.",
         },
         type: "education" as const,
+        status: { fr: "En cours", en: "In Progress" },
       },
       {
-        year: "2025",
+        year: "2024 – 2026",
         title: {
-          fr: "Formation AWS Cloud Practitioner",
-          en: "AWS Cloud Practitioner Training",
+          fr: "BTS Administration et Sécurité des Systèmes et Réseaux",
+          en: "BTS System and Network Administration & Security",
+        },
+        institution: {
+          fr: "INSIM Alger",
+          en: "INSIM Algiers",
         },
         desc: {
-          fr: "Formation aux fondamentaux du cloud AWS : architecture, services principaux, sécurité et bonnes pratiques.",
-          en: "Training on AWS cloud fundamentals: architecture, core services, security, and best practices.",
+          fr: "Formation de deux ans spécialisée dans l'administration des infrastructures réseau, la gestion des systèmes informatiques et la sécurité des environnements IT.",
+          en: "Two-year program specializing in network infrastructure administration, IT systems management, and IT environment security.",
+        },
+        type: "education" as const,
+        status: { fr: "En cours", en: "In Progress" },
+      },
+      {
+        year: "Nov. 2025 – Mars 2026",
+        title: {
+          fr: "Formation Introduction à la Cybersécurité",
+          en: "Introduction to Cybersecurity Training",
+        },
+        institution: {
+          fr: "GoMyCode",
+          en: "GoMyCode",
+        },
+        desc: {
+          fr: "Formation couvrant les fondamentaux de la cybersécurité, les menaces informatiques, les vulnérabilités, les architectures de sécurité et les concepts de défense des infrastructures.",
+          en: "Training covering cybersecurity fundamentals, cyber threats, vulnerabilities, security architectures and infrastructure defense concepts.",
         },
         type: "certification" as const,
       },
       {
-        year: "2024 - 2026",
+        year: "Nov. 2025 – Mars 2026",
         title: {
-          fr: "BTS SIO - Option SISR",
-          en: "BTS SIO - SISR Option",
+          fr: "Formation AWS Cloud Practitioner",
+          en: "AWS Cloud Practitioner Training",
+        },
+        institution: {
+          fr: "GoMyCode",
+          en: "GoMyCode",
         },
         desc: {
-          fr: "Solutions d'infrastructure, systèmes et réseaux. Formation approfondie en administration système, réseau et sécurité.",
-          en: "Infrastructure solutions, systems, and networks. In-depth training in system administration, networking, and security.",
+          fr: "Formation portant sur les concepts fondamentaux du cloud computing avec AWS, incluant l'infrastructure cloud, les services principaux (EC2, S3, IAM, VPC) et les bonnes pratiques de sécurité.",
+          en: "Training on foundational cloud computing concepts with AWS, including cloud infrastructure, core services (EC2, S3, IAM, VPC) and security best practices.",
         },
-        type: "education" as const,
+        type: "certification" as const,
       },
       {
-        year: "2020 - 2023",
+        year: "2025",
         title: {
-          fr: "Formation en Finance & Comptabilité",
-          en: "Finance & Accounting Degree",
+          fr: "Microsoft Power BI Data Analyst Associate (PL-300)",
+          en: "Microsoft Power BI Data Analyst Associate (PL-300)",
+        },
+        institution: {
+          fr: "Microsoft Certified",
+          en: "Microsoft Certified",
         },
         desc: {
-          fr: "Diplôme en finance et comptabilité. Développement de compétences analytiques, gestion des risques et interprétation des données.",
-          en: "Finance and accounting degree. Developed analytical skills, risk management, and data interpretation.",
+          fr: "Certification professionnelle Microsoft validant les compétences en analyse de données, modélisation de données, visualisation et création de tableaux de bord avec Power BI.",
+          en: "Microsoft professional certification validating skills in data analysis, data modeling, visualization and dashboard creation with Power BI.",
+        },
+        type: "certification" as const,
+      },
+      {
+        year: "2020 – 2023",
+        title: {
+          fr: "Bachelor en Finance et Comptabilité",
+          en: "Bachelor in Finance and Accounting",
+        },
+        institution: {
+          fr: "PPA Business School — Programme en partenariat avec HIMI Alger",
+          en: "PPA Business School — Partnership program with HIMI Algiers",
+        },
+        desc: {
+          fr: "Formation en finance, analyse financière, comptabilité et gestion d'entreprise.",
+          en: "Training in finance, financial analysis, accounting and business management.",
         },
         type: "experience" as const,
       },
     ],
   },
+  certifications: {
+    title: { fr: "Certifications", en: "Certifications" },
+    items: [
+      {
+        name: { fr: "Power BI Data Analyst Associate (PL-300)", en: "Power BI Data Analyst Associate (PL-300)" },
+        org: "Microsoft Certified",
+        year: "2025",
+        desc: {
+          fr: "Compétences en analyse de données, modélisation, visualisation et création de tableaux de bord avec Power BI.",
+          en: "Skills in data analysis, modeling, visualization and dashboard creation with Power BI.",
+        },
+        color: "from-accent/20 to-accent/5",
+        iconColor: "text-accent",
+      },
+      {
+        name: { fr: "AWS Cloud Practitioner Training", en: "AWS Cloud Practitioner Training" },
+        org: "GoMyCode",
+        year: "2025 – 2026",
+        desc: {
+          fr: "Fondamentaux du cloud AWS : architecture, services principaux, sécurité et bonnes pratiques.",
+          en: "AWS cloud fundamentals: architecture, core services, security and best practices.",
+        },
+        color: "from-primary/20 to-primary/5",
+        iconColor: "text-primary",
+      },
+      {
+        name: { fr: "Introduction à la Cybersécurité", en: "Introduction to Cybersecurity" },
+        org: "GoMyCode",
+        year: "2025 – 2026",
+        desc: {
+          fr: "Fondamentaux de la cybersécurité, menaces, vulnérabilités, architectures de sécurité et défense des infrastructures.",
+          en: "Cybersecurity fundamentals, threats, vulnerabilities, security architectures and infrastructure defense.",
+        },
+        color: "from-secondary/20 to-secondary/5",
+        iconColor: "text-secondary",
+      },
+    ],
+  },
   lab: {
-    title: { fr: "PROJETS PRATIQUES & LABS — Cybersécurité · GoMyCode", en: "PRACTICAL PROJECTS & LABS — Cybersecurity · GoMyCode" },
+    title: { fr: "Labs pratiques en Cybersécurité", en: "Cybersecurity Practical Labs" },
     subtitle: {
-      fr: "Déc. 2025 – Mars 2026 · 6 checkpoints validés · 100% progression",
-      en: "Dec. 2025 – Mar. 2026 · 6 checkpoints validated · 100% progression",
+      fr: "Labs de sécurité pratiques réalisés pendant la formation et la pratique personnelle.",
+      en: "Hands-on security labs completed during training and personal practice.",
     },
   },
   hybrid: {
-    title: { fr: "Cybersécurité × Finance", en: "Cybersecurity × Finance Mindset" },
+    title: { fr: "Profil Hybride : Finance × Data × Cybersecurity", en: "Hybrid Profile: Finance × Data × Cybersecurity" },
     subtitle: {
-      fr: "Comment mon parcours en finance renforce mon profil cybersécurité",
-      en: "How my finance background strengthens my cybersecurity profile",
+      fr: "Comment mon parcours en finance et analyse de données renforce mon profil technique",
+      en: "How my finance and data analytics background strengthens my technical profile",
     },
     items: [
       {
-        finance: { fr: "Analyse des risques financiers", en: "Financial Risk Analysis" },
-        cyber: { fr: "Évaluation des risques de sécurité", en: "Security Risk Assessment" },
+        finance: { fr: "Analyse financière", en: "Financial Analysis" },
+        cyber: { fr: "Analyse des risques cybersécurité", en: "Cybersecurity Risk Analysis" },
         desc: {
           fr: "La méthodologie d'analyse des risques financiers se transpose directement à l'évaluation des menaces et vulnérabilités des systèmes d'information.",
           en: "Financial risk analysis methodology directly translates to evaluating threats and vulnerabilities in information systems.",
         },
       },
       {
-        finance: { fr: "Analyse de données", en: "Data Analysis" },
-        cyber: { fr: "Analyse de logs & SIEM", en: "Log Analysis & SIEM" },
+        finance: { fr: "Data Analytics (Power BI)", en: "Data Analytics (Power BI)" },
+        cyber: { fr: "Analyse de logs & monitoring", en: "Log Analysis & Monitoring" },
         desc: {
-          fr: "L'habitude de traiter et interpréter de grands volumes de données financières facilite l'analyse des logs de sécurité et la détection d'anomalies.",
-          en: "Experience processing and interpreting large volumes of financial data facilitates security log analysis and anomaly detection.",
+          fr: "L'habitude de traiter et interpréter de grands volumes de données facilite l'analyse des logs de sécurité et la détection d'anomalies.",
+          en: "Experience processing and interpreting large data volumes facilitates security log analysis and anomaly detection.",
         },
       },
       {
-        finance: { fr: "Rigueur & discipline", en: "Rigor & Discipline" },
-        cyber: { fr: "Investigation structurée d'incidents", en: "Structured Incident Investigation" },
+        finance: { fr: "Compréhension métier", en: "Business Understanding" },
+        cyber: { fr: "Infrastructure fiable & sécurisée", en: "Reliable & Secure Infrastructure" },
         desc: {
-          fr: "La rigueur acquise en comptabilité et audit s'applique naturellement à l'investigation méthodique d'incidents de sécurité.",
-          en: "The rigor acquired in accounting and auditing naturally applies to methodical security incident investigation.",
+          fr: "La compréhension des enjeux business permet de concevoir des infrastructures qui répondent aux besoins réels des organisations tout en assurant leur sécurité.",
+          en: "Understanding business needs enables designing infrastructure that meets organizational requirements while ensuring security.",
         },
       },
       {
