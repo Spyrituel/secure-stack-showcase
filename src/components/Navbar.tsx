@@ -10,11 +10,10 @@ const Navbar = () => {
 
   const links = [
     { href: "#lab", label: t(translations.nav.lab) },
-    { href: "#aws", label: "AWS Cloud" },
+    { href: "#aws", label: t(translations.nav.aws) },
     { href: "#projects", label: t(translations.nav.projects) },
     { href: "#hybrid", label: t(translations.nav.hybrid) },
-    { href: "#about", label: t(translations.nav.about) },
-    { href: "#skills", label: t(translations.nav.skills) },
+    { href: "#certifications", label: t(translations.nav.certifications) },
     { href: "#experience", label: t(translations.nav.experience) },
     { href: "#contact", label: t(translations.nav.contact) },
   ];
@@ -26,8 +25,7 @@ const Navbar = () => {
           AH
         </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5">
           {links.map((l) => (
             <a
               key={l.href}
@@ -45,20 +43,18 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-border"
+            className="lg:hidden glass border-t border-border"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {links.map((l) => (
