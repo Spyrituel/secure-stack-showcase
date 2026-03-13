@@ -120,10 +120,10 @@ export const translations = {
     ],
   },
   lab: {
-    title: { fr: "Lab Technique", en: "Tech Lab" },
+    title: { fr: "PROJETS PRATIQUES & LABS — Cybersécurité · GoMyCode", en: "PRACTICAL PROJECTS & LABS — Cybersecurity · GoMyCode" },
     subtitle: {
-      fr: "Mon environnement de travail et d'expérimentation",
-      en: "My working and experimentation environment",
+      fr: "Déc. 2025 – Mars 2026 · 6 checkpoints validés · 100% progression",
+      en: "Dec. 2025 – Mar. 2026 · 6 checkpoints validated · 100% progression",
     },
   },
   contact: {
