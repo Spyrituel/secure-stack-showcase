@@ -30,7 +30,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="#lab"
+              href="#projects"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
             >
               {t(translations.hero.cta1)}

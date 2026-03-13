@@ -11,13 +11,13 @@ const TechLabSection = () => {
   const navigate = useNavigate();
 
   const sectionTitle = {
-    fr: "PROJETS PRATIQUES & LABS — Cybersécurité · GoMyCode",
-    en: "PRACTICAL PROJECTS & LABS — Cybersecurity · GoMyCode",
+    fr: "Labs pratiques en Cybersécurité",
+    en: "Cybersecurity Practical Labs",
   };
 
   const subtitle = {
-    fr: "Déc. 2025 – Mars 2026 · 6 checkpoints validés · 100% progression",
-    en: "Dec. 2025 – Mar. 2026 · 6 checkpoints validated · 100% progression",
+    fr: "Labs de sécurité pratiques réalisés pendant la formation et la pratique personnelle.",
+    en: "Hands-on security labs completed during training and personal practice.",
   };
 
   const viewDetails = {
