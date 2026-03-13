@@ -40,7 +40,7 @@ const CyberBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 200) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 212, 255, ${0.08 * (1 - dist / 200)})`;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.08 * (1 - dist / 200)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -52,7 +52,7 @@ const CyberBackground = () => {
       // Draw nodes
       for (const node of nodes) {
         ctx.beginPath();
-        ctx.fillStyle = "rgba(0, 212, 255, 0.3)";
+        ctx.fillStyle = "rgba(59, 130, 246, 0.3)";
         ctx.arc(node.x, node.y, 1.5, 0, Math.PI * 2);
         ctx.fill();
 

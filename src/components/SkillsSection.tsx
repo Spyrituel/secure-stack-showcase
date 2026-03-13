@@ -15,7 +15,17 @@ const skillCategories = [
   },
   {
     key: "security" as const,
-    skills: ["Vulnerability Scanning", "Security Hardening", "Monitoring", "Incident Detection"],
+    skills: ["Vulnerability Analysis", "Network Monitoring", "Security Hardening", "IDS/IPS"],
+    color: "from-primary/15 to-secondary/10",
+  },
+  {
+    key: "cloud" as const,
+    skills: ["AWS Fundamentals", "EC2", "S3", "IAM", "VPC", "Cloud Architecture"],
+    color: "from-primary/20 to-accent/10",
+  },
+  {
+    key: "finance" as const,
+    skills: ["Financial Analysis", "Risk Analysis", "Data Interpretation", "Business Decision Analysis"],
     color: "from-accent/20 to-accent/5",
   },
   {
@@ -43,14 +53,14 @@ const SkillsSection = () => {
           <div className="neon-line w-20 mb-12" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((cat, ci) => (
             <motion.div
               key={cat.key}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: ci * 0.1, duration: 0.5 }}
+              transition={{ delay: ci * 0.08, duration: 0.5 }}
               className="glass rounded-2xl p-6 gradient-border group hover:cyber-glow transition-shadow duration-500"
             >
               <h3 className="font-heading text-lg font-semibold text-foreground mb-4">

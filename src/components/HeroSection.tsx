@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Download, Mail } from "lucide-react";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -43,6 +43,13 @@ const HeroSection = () => {
               {t(translations.hero.cta2)}
               <Download size={16} />
             </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
+            >
+              {t(translations.hero.cta3)}
+              <Mail size={16} />
+            </a>
           </div>
         </motion.div>
 
@@ -55,7 +62,7 @@ const HeroSection = () => {
           <div className="relative w-72 h-72 lg:w-80 lg:h-80">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 animate-pulse-glow" />
             <div className="absolute inset-4 rounded-full glass gradient-border flex items-center justify-center">
-              <div className="text-6xl font-heading font-bold gradient-text">AM</div>
+              <div className="text-6xl font-heading font-bold gradient-text">AH</div>
             </div>
           </div>
         </motion.div>
