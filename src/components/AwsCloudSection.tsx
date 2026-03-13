@@ -11,12 +11,12 @@ const AwsCloudSection = () => {
   const navigate = useNavigate();
 
   const sectionTitle = {
-    fr: "AWS CLOUD — Formation & Compétences Cloud",
-    en: "AWS CLOUD — Training & Cloud Skills",
+    fr: "Projets & Labs Cloud AWS",
+    en: "AWS Cloud Projects & Labs",
   };
   const sectionSubtitle = {
-    fr: "Formation AWS Cloud Practitioner · Concepts fondamentaux du Cloud AWS",
-    en: "AWS Cloud Practitioner Training · Foundational AWS Cloud Concepts",
+    fr: "Exercices pratiques d'infrastructure cloud basés sur la formation AWS Cloud Practitioner.",
+    en: "Hands-on cloud infrastructure exercises based on AWS Cloud Practitioner training.",
   };
   const foundationsTitle = {
     fr: "Fondamentaux AWS Cloud",
