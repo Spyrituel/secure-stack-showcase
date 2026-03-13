@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { labs } from "@/data/labs";
+import { awsLabs } from "@/data/awsLabs";
 import { motion } from "framer-motion";
 import { ArrowLeft, Terminal, Target, MonitorCog, Camera, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
