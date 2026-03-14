@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, ZoomIn, X, ChevronLeft, ChevronRight, Upload, Loader2 } from "lucide-react";
+import { Camera, ZoomIn, X, ChevronLeft, ChevronRight, Upload, Loader2, Video } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { LabScreenshot } from "@/data/labs";
 import { Button } from "@/components/ui/button";
