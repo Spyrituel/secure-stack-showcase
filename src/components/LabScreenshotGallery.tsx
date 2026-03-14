@@ -10,6 +10,7 @@ import type { Tables } from "@/integrations/supabase/types";
 interface LabScreenshotGalleryProps {
   screenshots: LabScreenshot[];
   labSlug: string;
+  videoUrl?: string;
 }
 
 type LabScreenshotRow = Tables<"lab_screenshots">;
