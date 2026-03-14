@@ -19,7 +19,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [uploadedScreenshots, setUploadedScreenshots] = useState<LabScreenshot[]>([]);
   const [isUploading, setIsUploading] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [uploadMessage, setUploadMessage] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -29,30 +28,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     () => [...screenshots, ...uploadedScreenshots],
     [screenshots, uploadedScreenshots]
   );
-
-  useEffect(() => {
-    let mounted = true;
-
-    const syncAuthState = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (mounted) {
-        setIsAuthenticated(Boolean(data.user));
-      }
-    };
-
-    void syncAuthState();
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsAuthenticated(Boolean(session?.user));
-    });
-
-    return () => {
-      mounted = false;
-      subscription.unsubscribe();
-    };
-  }, []);
 
   useEffect(() => {
     const fetchUploadedScreenshots = async () => {
