@@ -20,6 +20,7 @@ export interface Lab {
   results: { fr: string[]; en: string[] };
   tech: string[];
   screenshots?: LabScreenshot[];
+  videoUrl?: string;
 }
 
 export const labs: Lab[] = [
