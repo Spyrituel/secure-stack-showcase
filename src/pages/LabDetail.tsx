@@ -88,9 +88,7 @@ const LabDetail = () => {
             {/* Tech tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {lab.tech.map((tech) => (
-                <Badge key={tech} variant="outline" className="text-xs border-border text-muted-foreground">
-                  {tech}
-                </Badge>
+                <TechBadge key={tech} name={tech} className="text-xs py-1 px-3" />
               ))}
             </div>
 
