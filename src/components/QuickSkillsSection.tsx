@@ -16,7 +16,7 @@ const QuickSkillsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 px-6 relative z-10">
+    <section className="py-12 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
