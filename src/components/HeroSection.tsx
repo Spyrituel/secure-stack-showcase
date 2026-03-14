@@ -1,7 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion, useAnimation } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
+import CVDropdown from "@/components/CVDropdown";
 import { useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
 
