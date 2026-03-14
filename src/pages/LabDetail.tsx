@@ -5,6 +5,8 @@ import { awsLabs } from "@/data/awsLabs";
 import { motion } from "framer-motion";
 import { ArrowLeft, Terminal, Target, MonitorCog, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import TechBadge from "@/components/TechBadge";
+import TechIcon from "@/components/TechIcon";
 import { Progress } from "@/components/ui/progress";
 import CyberBackground from "@/components/CyberBackground";
 import LabScreenshotGallery from "@/components/LabScreenshotGallery";
