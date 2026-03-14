@@ -2,6 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();
