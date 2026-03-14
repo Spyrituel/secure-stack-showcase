@@ -670,6 +670,7 @@ const About = () => {
       © {new Date().getFullYear()} Alaeddine Hamadouche — Portfolio
     </footer>
   </div>
-);
+  );
+};
 
 export default About;
