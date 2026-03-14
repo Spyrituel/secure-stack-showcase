@@ -116,7 +116,7 @@ export const translations = {
         status: { fr: "En cours", en: "In Progress" },
       },
       {
-        year: "2024 – 2026",
+        year: "Nov. 2025 – 2028",
         title: {
           fr: "BTS Administration et Sécurité des Systèmes et Réseaux",
           en: "BTS System and Network Administration & Security",
