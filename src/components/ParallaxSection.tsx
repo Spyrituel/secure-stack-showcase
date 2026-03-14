@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ParallaxSectionProps {
@@ -7,23 +7,27 @@ interface ParallaxSectionProps {
   className?: string;
 }
 
-const ParallaxSection = ({ children, offset = 30, className = "" }: ParallaxSectionProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+const ParallaxSection = forwardRef<HTMLDivElement, ParallaxSectionProps>(
+  ({ children, offset = 30, className = "" }, _ref) => {
+    const innerRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+      target: innerRef,
+      offset: ["start end", "end start"],
+    });
 
-  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.85, 1, 1, 0.85]);
+    const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+    const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.85, 1, 1, 0.85]);
 
-  return (
-    <div ref={ref} className={className}>
-      <motion.div style={{ y, opacity }}>
-        {children}
-      </motion.div>
-    </div>
-  );
-};
+    return (
+      <div ref={innerRef} className={`relative ${className}`}>
+        <motion.div style={{ y, opacity }}>
+          {children}
+        </motion.div>
+      </div>
+    );
+  }
+);
+
+ParallaxSection.displayName = "ParallaxSection";
 
 export default ParallaxSection;

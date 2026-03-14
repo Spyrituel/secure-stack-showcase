@@ -49,7 +49,7 @@ const ContactSection = () => {
   const links = [
     { icon: Mail, label: "mus@hmdouche.com", href: "mailto:mus@hmdouche.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/alaeddine-hamadouche-7681511b9" },
-    { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/alaeddine-hamadouche" },
   ];
 
   return (
@@ -90,8 +90,9 @@ const ContactSection = () => {
               autoComplete="off"
             />
             <div>
-              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.name)}</label>
+              <label htmlFor="contact-name" className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.name)}</label>
               <input
+                id="contact-name"
                 type="text"
                 required
                 maxLength={100}
@@ -101,8 +102,9 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.email)}</label>
+              <label htmlFor="contact-email" className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.email)}</label>
               <input
+                id="contact-email"
                 type="email"
                 required
                 maxLength={255}
@@ -112,8 +114,9 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.message)}</label>
+              <label htmlFor="contact-message" className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.message)}</label>
               <textarea
+                id="contact-message"
                 required
                 rows={4}
                 maxLength={5000}
