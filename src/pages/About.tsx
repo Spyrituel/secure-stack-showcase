@@ -252,7 +252,7 @@ const academicItems = [
     status: { fr: "En cours", en: "In Progress" },
   },
   {
-    year: "2020 – 2023",
+    year: "2021 – 2023",
     icon: BookOpen,
     title: { fr: "Bachelor Finance et Comptabilité", en: "Bachelor in Finance and Accounting" },
     institution: { fr: "PPA Business School — Partenariat HIMI Alger", en: "PPA Business School — Partnership with HIMI Algiers" },
