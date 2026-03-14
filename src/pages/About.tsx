@@ -216,7 +216,7 @@ const ProfileSection = () => {
    ═══════════════════════════════════════════ */
 const academicItems = [
   {
-    year: "2024 – 2026",
+    year: "Nov. 2025 – 2028",
     icon: GraduationCap,
     title: { fr: "AEC – Gestion des systèmes et réseaux informatiques", en: "AEC – IT Systems and Network Management" },
     institution: { fr: "Cégep de Sherbrooke (Programme délocalisé à INSIM Alger)", en: "Cégep de Sherbrooke (Remote program at INSIM Algiers)" },
