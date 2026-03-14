@@ -1,65 +1,63 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { 
-  Monitor, Network, Shield, Cloud, BarChart3, Activity,
-  Terminal, Server, Lock, Database, Wifi, Eye
-} from "lucide-react";
+import { Terminal, Network, Shield, Cloud, Activity, BarChart3 } from "lucide-react";
+import TechIcon from "@/components/TechIcon";
 
 const skillCategories = [
   {
     key: "sysadmin" as const,
     icon: Terminal,
     skills: [
-      { name: "Linux", icon: Monitor },
-      { name: "Windows Server", icon: Server },
+      { name: "Linux" },
+      { name: "Windows Server" },
     ],
   },
   {
     key: "networking" as const,
     icon: Network,
     skills: [
-      { name: "TCP/IP", icon: Wifi },
-      { name: "DNS", icon: Network },
-      { name: "DHCP", icon: Network },
-      { name: "Routing", icon: Network },
-      { name: "VLAN", icon: Network },
+      { name: "TCP/IP" },
+      { name: "DNS" },
+      { name: "DHCP" },
+      { name: "Routing" },
+      { name: "VLAN" },
     ],
   },
   {
     key: "security" as const,
     icon: Shield,
     skills: [
-      { name: "SIEM", icon: Eye },
-      { name: "IDS/IPS", icon: Shield },
-      { name: "Log Analysis", icon: Activity },
-      { name: "Threat Analysis", icon: Lock },
+      { name: "SIEM" },
+      { name: "IDS/IPS" },
+      { name: "Log Analysis" },
+      { name: "Threat Analysis" },
     ],
   },
   {
     key: "cloud" as const,
     icon: Cloud,
     skills: [
-      { name: "AWS", icon: Cloud },
-      { name: "Cloud Fundamentals", icon: Cloud },
-      { name: "IAM", icon: Lock },
+      { name: "AWS" },
+      { name: "Cloud Fundamentals" },
+      { name: "IAM" },
     ],
   },
   {
     key: "monitoring" as const,
     icon: Activity,
     skills: [
-      { name: "Wireshark", icon: Eye },
-      { name: "Nmap", icon: Network },
-      { name: "Bash", icon: Terminal },
+      { name: "Wireshark" },
+      { name: "Nmap" },
+      { name: "Bash" },
     ],
   },
   {
     key: "finance" as const,
     icon: BarChart3,
     skills: [
-      { name: "Power BI", icon: BarChart3 },
-      { name: "Data Analysis", icon: Database },
+      { name: "Power BI" },
+      { name: "Data Analysis" },
     ],
   },
 ];
@@ -108,19 +106,18 @@ const SkillsSection = () => {
                   </h3>
                 </div>
                 <div className="space-y-3">
-                  {cat.skills.map((skill) => {
-                    const SkillIcon = skill.icon;
-                    return (
-                      <motion.div
-                        key={skill.name}
-                        whileHover={{ x: 4 }}
-                        className="flex items-center gap-3 px-3 py-2 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
-                      >
-                        <SkillIcon size={14} className="text-primary/70 shrink-0" />
-                        <span className="text-sm text-muted-foreground">{skill.name}</span>
-                      </motion.div>
-                    );
-                  })}
+                  {cat.skills.map((skill) => (
+                    <motion.div
+                      key={skill.name}
+                      whileHover={{ x: 4 }}
+                      className="flex items-center gap-3 px-3 py-2 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors group/skill"
+                    >
+                      <span className="text-primary/70 shrink-0 group-hover/skill:text-primary transition-colors group-hover/skill:scale-110 transform duration-200">
+                        <TechIcon name={skill.name} size={18} />
+                      </span>
+                      <span className="text-sm text-muted-foreground">{skill.name}</span>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
             );

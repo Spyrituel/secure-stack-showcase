@@ -5,6 +5,8 @@ import { awsLabs } from "@/data/awsLabs";
 import { motion } from "framer-motion";
 import { ArrowLeft, Terminal, Target, MonitorCog, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import TechBadge from "@/components/TechBadge";
+import TechIcon from "@/components/TechIcon";
 import { Progress } from "@/components/ui/progress";
 import CyberBackground from "@/components/CyberBackground";
 import LabScreenshotGallery from "@/components/LabScreenshotGallery";
@@ -86,9 +88,7 @@ const LabDetail = () => {
             {/* Tech tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {lab.tech.map((tech) => (
-                <Badge key={tech} variant="outline" className="text-xs border-border text-muted-foreground">
-                  {tech}
-                </Badge>
+                <TechBadge key={tech} name={tech} className="text-xs py-1 px-3" />
               ))}
             </div>
 
@@ -128,9 +128,10 @@ const LabDetail = () => {
                 )}
                 <div className="flex flex-wrap gap-2">
                   {lab.environment[lang].map((env) => (
-                    <Badge key={env} className="bg-muted text-muted-foreground border-0 text-xs">
+                    <div key={env} className="inline-flex items-center gap-1.5 bg-muted text-muted-foreground border-0 text-xs rounded-full px-3 py-1 font-semibold">
+                      <TechIcon name={env} size={12} className="text-primary/60" />
                       {env}
-                    </Badge>
+                    </div>
                   ))}
                 </div>
               </div>

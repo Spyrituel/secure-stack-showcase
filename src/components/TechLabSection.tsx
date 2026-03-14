@@ -2,7 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
 import { labs } from "@/data/labs";
-import { Badge } from "@/components/ui/badge";
+import TechBadge from "@/components/TechBadge";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -78,18 +78,12 @@ const TechLabSection = () => {
 
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {lab.tech.slice(0, 3).map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="text-[10px] px-2 py-0.5 border-border/50 text-muted-foreground"
-                      >
-                        {tech}
-                      </Badge>
+                      <TechBadge key={tech} name={tech} />
                     ))}
                     {lab.tech.length > 3 && (
-                      <Badge variant="outline" className="text-[10px] px-2 py-0.5 border-border/50 text-muted-foreground">
+                      <span className="inline-flex items-center rounded-full border border-border/50 px-2.5 py-0.5 text-[10px] font-semibold text-muted-foreground">
                         +{lab.tech.length - 3}
-                      </Badge>
+                      </span>
                     )}
                   </div>
 
