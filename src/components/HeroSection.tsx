@@ -59,7 +59,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="hidden md:flex justify-center -mt-8"
+          className="hidden md:flex items-end justify-center"
         >
           <div className="relative w-72 h-72 lg:w-80 lg:h-80 group">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse-glow" />
