@@ -175,10 +175,10 @@ const HeroSection = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="#projects"
+            href="#lab"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
           >
-            {t(translations.hero.cta1)}
+            {t(translations.hero.ctaLabs)}
           </a>
           <a
             href="/cv-finance-alaeddine-hamadouche.pdf"

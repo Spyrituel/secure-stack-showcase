@@ -34,7 +34,7 @@ const Index = () => {
         <ContactSection />
       </ParallaxSection>
       <footer className="relative z-10 py-8 text-center text-xs text-muted-foreground border-t border-border/50">
-        © 2025 Alaeddine Hamadouche — Portfolio
+        © {new Date().getFullYear()} Alaeddine Hamadouche — Portfolio
       </footer>
     </div>
   );
