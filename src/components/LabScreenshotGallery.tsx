@@ -96,7 +96,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
               : "Lab screenshot";
 
         const { error: insertError } = await supabase.from("lab_screenshots").insert({
-          user_id: user.id,
           lab_slug: labSlug,
           image_path: objectPath,
           caption_fr: generatedCaption,
