@@ -167,15 +167,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
           </div>
         </div>
 
-        {!isAuthenticated && (
-          <p className="text-xs text-muted-foreground mb-3">
-            {lang === "fr"
-              ? "Connexion requise pour importer des captures." 
-              : "Authentication required to import screenshots."}
-          </p>
-        )}
-
-        {uploadMessage && <p className="text-xs text-primary mb-3">{uploadMessage}</p>}
 
         {allScreenshots.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
