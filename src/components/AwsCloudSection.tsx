@@ -87,9 +87,7 @@ const AwsCloudSection = () => {
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {lab.tech.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-[10px] px-2 py-0.5 border-border/50 text-muted-foreground">
-                        {tech}
-                      </Badge>
+                      <TechBadge key={tech} name={tech} />
                     ))}
                   </div>
                   <div className="flex items-center gap-1.5 text-xs font-heading font-medium text-primary group-hover:gap-3 transition-all duration-300">
