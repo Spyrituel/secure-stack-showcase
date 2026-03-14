@@ -15,7 +15,7 @@ interface LabScreenshotGalleryProps {
 
 type LabScreenshotRow = Tables<"lab_screenshots">;
 
-const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProps) => {
+const LabScreenshotGallery = ({ screenshots, labSlug, videoUrl }: LabScreenshotGalleryProps) => {
   const { lang, t } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [uploadedScreenshots, setUploadedScreenshots] = useState<LabScreenshot[]>([]);
