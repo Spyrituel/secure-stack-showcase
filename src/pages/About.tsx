@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 import { Badge } from "@/components/ui/badge";
+import CVDropdown from "@/components/CVDropdown";
 import { toast } from "sonner";
 
 const stagger = {
