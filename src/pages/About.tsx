@@ -234,7 +234,7 @@ const academicItems = [
     status: { fr: "En cours", en: "In Progress" },
   },
   {
-    year: "2024 – 2026",
+    year: "Nov. 2025 – 2028",
     icon: Server,
     title: { fr: "BTS – Administration et Sécurité des Systèmes et Réseaux", en: "BTS – System and Network Administration & Security" },
     institution: { fr: "INSIM Alger", en: "INSIM Algiers" },
