@@ -79,7 +79,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="font-heading text-xl font-bold text-primary">
-          Portfolio
+          Alae Portfolio
         </Link>
 
         <div className="hidden lg:flex items-center gap-6">
