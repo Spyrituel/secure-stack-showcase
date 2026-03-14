@@ -159,7 +159,7 @@ const ContactSection = () => {
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 whileHover={{ x: 6 }}
-                className="glass rounded-xl p-5 flex items-center gap-4 group border border-border/50 hover:border-primary/30 transition-all duration-300"
+                className="glass rounded-xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4 group border border-border/50 hover:border-primary/30 transition-all duration-300"
               >
                 <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
                   <item.icon size={20} />
