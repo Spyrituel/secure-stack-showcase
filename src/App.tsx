@@ -8,6 +8,7 @@ import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import LabDetail from "./pages/LabDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Install from "./pages/Install.tsx";
 
 const queryClient = new QueryClient();
 
