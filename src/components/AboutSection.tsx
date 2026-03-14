@@ -44,11 +44,11 @@ const AboutSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid lg:grid-cols-2 gap-16 items-center mb-20"
+          className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16 sm:mb-20"
         >
           {/* Photo side */}
           <motion.div custom={0} variants={fadeUp} className="flex justify-center">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 rotate-6" />
               <div className="absolute inset-0 rounded-2xl overflow-hidden border border-border">
                 <img

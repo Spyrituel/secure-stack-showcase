@@ -97,6 +97,6 @@
     box-shadow: 0 0 8px hsl(25 95% 53% / 0.5);
   }
   .section-padding {
-    @apply py-24 sm:py-32 px-6;
+    @apply py-16 sm:py-24 md:py-32 px-4 sm:px-6;
   }
 }

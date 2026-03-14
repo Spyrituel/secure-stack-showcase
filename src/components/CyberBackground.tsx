@@ -21,7 +21,7 @@ const CyberBackground = () => {
 
     let animationId: number;
     const particles: Particle[] = [];
-    const particleCount = 80;
+    const particleCount = window.innerWidth < 768 ? 30 : 80;
 
     const colors = [
       "234, 88, 12",   // orange

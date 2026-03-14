@@ -82,8 +82,8 @@ const HeroSection = () => {
   const typewriterText = useTypewriter(roles[lang]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
-      <div className="relative z-10 max-w-4xl mx-auto">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
+      <div className="relative z-10 max-w-4xl mx-auto w-full">
         {/* Profile Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -109,16 +109,16 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 glass px-5 py-2.5 rounded-full mb-8"
+          className="inline-flex items-center gap-2 glass px-3 sm:px-5 py-2 sm:py-2.5 rounded-full mb-6 sm:mb-8 max-w-full"
         >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-heading text-muted-foreground tracking-wider">
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />
+          <span className="text-[10px] sm:text-xs font-heading text-muted-foreground tracking-wider text-center leading-tight">
             {t({ fr: "Administration Systèmes & Réseaux • Cybersécurité", en: "System & Network Administration • Cybersecurity" })}
           </span>
         </motion.div>
 
         {/* Name with text reveal */}
-        <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+        <h1 className="font-heading text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-4">
           <TextReveal text="Hamadouche" className="text-primary" />
           <br />
           <TextReveal text="Alaeddine" className="text-foreground" startDelay={10} />
@@ -172,25 +172,25 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4"
         >
           <a
             href="#lab"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow w-full sm:w-auto"
           >
             {t(translations.hero.ctaLabs)}
           </a>
           <a
             href="/cv-finance-alaeddine-hamadouche.pdf"
             download
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border w-full sm:w-auto"
           >
             <Download size={16} />
             {t(translations.hero.cta2)}
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300 w-full sm:w-auto"
           >
             <Mail size={16} />
             {t(translations.hero.cta3)}
