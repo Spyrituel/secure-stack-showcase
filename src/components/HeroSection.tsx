@@ -172,7 +172,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
-          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-16 sm:mb-0"
         >
           <a
             href="#lab"
