@@ -82,14 +82,14 @@ const HeroSection = () => {
   const typewriterText = useTypewriter(roles[lang]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden pt-24 sm:pt-0">
       <div className="relative z-10 max-w-4xl mx-auto w-full">
         {/* Profile Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-5 sm:mb-8"
         >
           <div className="relative w-28 h-28 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 animate-pulse-glow" />
