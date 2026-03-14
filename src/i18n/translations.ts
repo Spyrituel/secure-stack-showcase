@@ -99,7 +99,7 @@ export const translations = {
     title: { fr: "Formation & Parcours", en: "Education & Background" },
     items: [
       {
-        year: "2024 – 2026",
+        year: "Nov. 2025 – 2028",
         title: {
           fr: "AEC — Gestion de Systèmes et Réseaux Informatiques",
           en: "AEC — IT Systems and Network Management",
@@ -116,7 +116,7 @@ export const translations = {
         status: { fr: "En cours", en: "In Progress" },
       },
       {
-        year: "2024 – 2026",
+        year: "Nov. 2025 – 2028",
         title: {
           fr: "BTS Administration et Sécurité des Systèmes et Réseaux",
           en: "BTS System and Network Administration & Security",
@@ -181,7 +181,7 @@ export const translations = {
         type: "certification" as const,
       },
       {
-        year: "2020 – 2023",
+        year: "2021 – 2023",
         title: {
           fr: "Bachelor Finance et Comptabilité",
           en: "Bachelor in Finance and Accounting",

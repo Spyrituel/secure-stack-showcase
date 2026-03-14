@@ -216,7 +216,7 @@ const ProfileSection = () => {
    ═══════════════════════════════════════════ */
 const academicItems = [
   {
-    year: "2024 – 2026",
+    year: "Nov. 2025 – 2028",
     icon: GraduationCap,
     title: { fr: "AEC – Gestion des systèmes et réseaux informatiques", en: "AEC – IT Systems and Network Management" },
     institution: { fr: "Cégep de Sherbrooke (Programme délocalisé à INSIM Alger)", en: "Cégep de Sherbrooke (Remote program at INSIM Algiers)" },
@@ -234,7 +234,7 @@ const academicItems = [
     status: { fr: "En cours", en: "In Progress" },
   },
   {
-    year: "2024 – 2026",
+    year: "Nov. 2025 – 2028",
     icon: Server,
     title: { fr: "BTS – Administration et Sécurité des Systèmes et Réseaux", en: "BTS – System and Network Administration & Security" },
     institution: { fr: "INSIM Alger", en: "INSIM Algiers" },
@@ -252,7 +252,7 @@ const academicItems = [
     status: { fr: "En cours", en: "In Progress" },
   },
   {
-    year: "2020 – 2023",
+    year: "2021 – 2023",
     icon: BookOpen,
     title: { fr: "Bachelor Finance et Comptabilité", en: "Bachelor in Finance and Accounting" },
     institution: { fr: "PPA Business School — Partenariat HIMI Alger", en: "PPA Business School — Partnership with HIMI Algiers" },
