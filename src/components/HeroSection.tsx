@@ -176,7 +176,7 @@ const HeroSection = () => {
         >
           <a
             href="#lab"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow w-full sm:w-auto"
           >
             {t(translations.hero.ctaLabs)}
           </a>
