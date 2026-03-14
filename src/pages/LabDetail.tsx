@@ -153,7 +153,7 @@ const LabDetail = () => {
               </div>
 
               {/* Screenshots - Reusable Component */}
-              <LabScreenshotGallery screenshots={screenshots} labSlug={slug ?? lab.slug} />
+              <LabScreenshotGallery screenshots={screenshots} labSlug={slug ?? lab.slug} videoUrl={(lab as any).videoUrl} />
 
               {/* Results */}
               <div className="glass rounded-2xl p-6 gradient-border">
