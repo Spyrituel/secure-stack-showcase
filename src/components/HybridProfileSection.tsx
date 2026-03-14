@@ -7,7 +7,7 @@ const HybridProfileSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="hybrid" className="py-24 px-6 relative z-10">
+    <section id="hybrid" className="py-16 sm:py-24 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
