@@ -52,6 +52,20 @@ const Navbar = () => {
         : "text-muted-foreground hover:text-foreground"
     }`;
 
+  const handleAnchorClick = (href: string, onClick?: () => void) => {
+    onClick?.();
+    // If we're on the homepage, manually scroll to the section
+    if (location.pathname === "/") {
+      const id = href.replace("#", "");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
+
   const renderLink = (l: typeof links[0], onClick?: () => void) => {
     if (l.isRoute) {
       return (
@@ -62,7 +76,19 @@ const Navbar = () => {
     }
     const target = location.pathname === "/" ? l.href : `/${l.href}`;
     return (
-      <a key={l.href} href={target} onClick={onClick} className={linkClass(l.id)}>
+      <a
+        key={l.href}
+        href={target}
+        onClick={(e) => {
+          if (location.pathname === "/") {
+            e.preventDefault();
+            handleAnchorClick(l.href, onClick);
+          } else {
+            onClick?.();
+          }
+        }}
+        className={linkClass(l.id)}
+      >
         {l.label}
       </a>
     );
