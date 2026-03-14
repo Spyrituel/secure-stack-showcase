@@ -82,16 +82,16 @@ const HeroSection = () => {
   const typewriterText = useTypewriter(roles[lang]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden pt-24 sm:pt-0">
       <div className="relative z-10 max-w-4xl mx-auto w-full">
         {/* Profile Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-5 sm:mb-8"
         >
-          <div className="relative w-28 h-28 mx-auto">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 animate-pulse-glow" />
             <div className="absolute inset-1 rounded-full overflow-hidden border-2 border-primary/30">
               <img
@@ -162,7 +162,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
-          className="text-muted-foreground/70 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-muted-foreground/70 text-sm sm:text-base max-w-xl mx-auto mb-6 sm:mb-10 leading-relaxed"
         >
           {t(translations.hero.summary)}
         </motion.p>
@@ -172,7 +172,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
-          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-16 sm:mb-0"
         >
           <a
             href="#lab"
@@ -203,7 +203,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2, duration: 0.8 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2"
       >
         <a href="#about" className="flex flex-col items-center gap-2 group">
           <motion.div
