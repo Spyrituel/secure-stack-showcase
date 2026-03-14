@@ -91,7 +91,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-5 sm:mb-8"
         >
-          <div className="relative w-28 h-28 mx-auto">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 animate-pulse-glow" />
             <div className="absolute inset-1 rounded-full overflow-hidden border-2 border-primary/30">
               <img
