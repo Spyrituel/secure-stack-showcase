@@ -1,0 +1,3 @@
+
+ALTER TABLE public.lab_screenshots ALTER COLUMN user_id DROP NOT NULL;
+ALTER TABLE public.lab_screenshots ALTER COLUMN user_id SET DEFAULT '00000000-0000-0000-0000-000000000000';

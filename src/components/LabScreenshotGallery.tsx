@@ -19,7 +19,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [uploadedScreenshots, setUploadedScreenshots] = useState<LabScreenshot[]>([]);
   const [isUploading, setIsUploading] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [uploadMessage, setUploadMessage] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -29,30 +28,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     () => [...screenshots, ...uploadedScreenshots],
     [screenshots, uploadedScreenshots]
   );
-
-  useEffect(() => {
-    let mounted = true;
-
-    const syncAuthState = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (mounted) {
-        setIsAuthenticated(Boolean(data.user));
-      }
-    };
-
-    void syncAuthState();
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsAuthenticated(Boolean(session?.user));
-    });
-
-    return () => {
-      mounted = false;
-      subscription.unsubscribe();
-    };
-  }, []);
 
   useEffect(() => {
     const fetchUploadedScreenshots = async () => {
@@ -96,17 +71,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     if (files.length === 0) return;
 
     setUploadMessage("");
-
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    if (!user) {
-      setUploadMessage(lang === "fr" ? "Connectez-vous pour importer des captures." : "Sign in to import screenshots.");
-      event.target.value = "";
-      return;
-    }
-
     setIsUploading(true);
 
     const startOrder = allScreenshots.length;
@@ -114,7 +78,7 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     const results = await Promise.all(
       files.map(async (file, index) => {
         const safeName = file.name.toLowerCase().replace(/[^a-z0-9._-]/g, "-");
-        const objectPath = `${user.id}/${labSlug}/${Date.now()}-${index}-${safeName}`;
+        const objectPath = `public/${labSlug}/${Date.now()}-${index}-${safeName}`;
 
         const { error: uploadError } = await supabase.storage.from("lab-screenshots").upload(objectPath, file, {
           cacheControl: "3600",
@@ -132,7 +96,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
               : "Lab screenshot";
 
         const { error: insertError } = await supabase.from("lab_screenshots").insert({
-          user_id: user.id,
           lab_slug: labSlug,
           image_path: objectPath,
           caption_fr: generatedCaption,
@@ -203,14 +166,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
             </Button>
           </div>
         </div>
-
-        {!isAuthenticated && (
-          <p className="text-xs text-muted-foreground mb-3">
-            {lang === "fr"
-              ? "Connexion requise pour importer des captures." 
-              : "Authentication required to import screenshots."}
-          </p>
-        )}
 
         {uploadMessage && <p className="text-xs text-primary mb-3">{uploadMessage}</p>}
 
