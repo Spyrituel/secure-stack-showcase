@@ -77,6 +77,56 @@ export const labs: Lab[] = [
       ],
     },
     tech: ["Linux", "Kali Linux", "grep", "syslog", "journalctl"],
+    screenshots: [
+      {
+        src: "/labs/lab1/creation_dossier.png",
+        caption: {
+          fr: "Préparation de l'environnement de travail : création du dossier et déplacement des fichiers logs.",
+          en: "Setting up the working environment: creating the folder and moving log files.",
+        },
+        command: "mkdir / mv / ls",
+      },
+      {
+        src: "/labs/lab1/affichage_contenu.png",
+        caption: {
+          fr: "Analyse des journaux système avec la commande `cat` pour afficher le contenu des fichiers logs.",
+          en: "System log analysis using `cat` command to display log file contents.",
+        },
+        command: "cat -n",
+      },
+      {
+        src: "/labs/lab1/head_tail.png",
+        caption: {
+          fr: "Utilisation de `head` et `tail` pour visualiser les premières et dernières lignes des fichiers logs.",
+          en: "Using `head` and `tail` to view the first and last lines of log files.",
+        },
+        command: "head / tail",
+      },
+      {
+        src: "/labs/lab1/grep_access_log.png",
+        caption: {
+          fr: "Utilisation de `grep` pour filtrer les entrées contenant des lettres spécifiques dans les journaux d'accès.",
+          en: "Using `grep` to filter entries containing specific letters in access logs.",
+        },
+        command: "grep [plc]",
+      },
+      {
+        src: "/labs/lab1/filtre_regex_ip.png",
+        caption: {
+          fr: "Filtrage des adresses IP avec une expression régulière `grep -E` dans les logs du serveur web.",
+          en: "Filtering IP addresses using `grep -E` regex in web server logs.",
+        },
+        command: "grep -E (regex IP)",
+      },
+      {
+        src: "/labs/lab1/logger_grep_syslog.png",
+        caption: {
+          fr: "Comparaison des logs via `journalctl` et `logger` sous Kali Linux pour comprendre la gestion des journaux.",
+          en: "Comparing logs via `journalctl` and `logger` on Kali Linux to understand log management.",
+        },
+        command: "logger / journalctl / grep",
+      },
+    ],
   },
   {
     id: "lab-2",
