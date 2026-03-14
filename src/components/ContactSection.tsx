@@ -49,7 +49,7 @@ const ContactSection = () => {
   const links = [
     { icon: Mail, label: "mus@hmdouche.com", href: "mailto:mus@hmdouche.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/alaeddine-hamadouche-7681511b9" },
-    { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/alaeddine-hamadouche" },
   ];
 
   return (
