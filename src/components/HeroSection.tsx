@@ -1,79 +1,138 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Download, Mail } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6">
-      <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto">
+        {/* Profile Photo */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <div className="inline-block glass px-4 py-2 rounded-full mb-6">
-            <span className="text-xs font-heading text-primary tracking-wider uppercase">
-              Portfolio 2025
-            </span>
-          </div>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-            {t(translations.hero.name)}
-          </h1>
-          <p className="text-lg sm:text-xl gradient-text font-heading font-medium mb-4">
-            {t(translations.hero.title)}
-          </p>
-          <p className="text-muted-foreground text-sm sm:text-base max-w-lg mb-8 leading-relaxed">
-            {t(translations.hero.summary)}
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
-            >
-              {t(translations.hero.cta1)}
-              <ArrowDown size={16} />
-            </a>
-            <a
-              href="#lab"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border"
-            >
-              {t(translations.hero.ctaLabs)}
-              <ArrowDown size={16} />
-            </a>
-            <a
-              href="/cv-finance-alaeddine-hamadouche.pdf"
-              download
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
-            >
-              {t(translations.hero.cta2)}
-              <Download size={16} />
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="hidden md:flex items-end justify-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-8"
         >
-          <div className="relative w-72 h-72 lg:w-80 lg:h-80 group">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse-glow" />
-            <div className="absolute inset-2 rounded-full overflow-hidden gradient-border">
+          <div className="relative w-28 h-28 mx-auto">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 animate-pulse-glow" />
+            <div className="absolute inset-1 rounded-full overflow-hidden border-2 border-primary/30">
               <img
                 src={profilePhoto}
                 alt="Alaeddine Hamadouche"
-                loading="lazy"
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                loading="eager"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
         </motion.div>
+
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="inline-flex items-center gap-2 glass px-5 py-2.5 rounded-full mb-8"
+        >
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-xs font-heading text-muted-foreground tracking-wider">
+            {t({ fr: "Administration Systèmes & Réseaux • Cybersécurité", en: "System & Network Administration • Cybersecurity" })}
+          </span>
+        </motion.div>
+
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4"
+        >
+          <span className="text-primary">Hamadouche</span>
+          <br />
+          <span className="text-foreground">Alaeddine</span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-4"
+        >
+          {t({
+            fr: "Passionné par l'",
+            en: "Passionate about ",
+          })}
+          <span className="text-primary font-medium">
+            {t({ fr: "infrastructure IT", en: "IT infrastructure" })}
+          </span>
+          {t({ fr: " & la ", en: " & " })}
+          <span className="text-secondary font-medium">
+            {t({ fr: "cybersécurité", en: "cybersecurity" })}
+          </span>
+          .
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-muted-foreground/70 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed"
+        >
+          {t(translations.hero.summary)}
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="flex flex-wrap justify-center gap-4"
+        >
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 cyber-glow"
+          >
+            {t(translations.hero.cta1)}
+          </a>
+          <a
+            href="/cv-finance-alaeddine-hamadouche.pdf"
+            download
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border"
+          >
+            <Download size={16} />
+            {t(translations.hero.cta2)}
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
+          >
+            <Mail size={16} />
+            {t(translations.hero.cta3)}
+          </a>
+        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
+        <a href="#about" className="flex flex-col items-center gap-2 group">
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:cyber-glow transition-shadow duration-300"
+          >
+            <ArrowDown size={20} className="text-primary" />
+          </motion.div>
+        </a>
+      </motion.div>
     </section>
   );
 };

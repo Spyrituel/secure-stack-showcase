@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Download, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Download, Send, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -15,108 +15,118 @@ const ContactSection = () => {
     setForm({ name: "", email: "", message: "" });
   };
 
+  const links = [
+    { icon: Mail, label: "mus@hmdouche.com", href: "mailto:mus@hmdouche.com" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/alaeddine-hamadouche-7681511b9" },
+    { icon: Github, label: "GitHub", href: "https://github.com" },
+  ];
+
   return (
-    <section id="contact" className="py-24 px-6 relative z-10">
+    <section id="contact" className="section-padding relative z-10">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-2 gradient-text">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-2 text-foreground">
             {t(translations.contact.title)}
           </h2>
-          <div className="neon-line w-20 mb-4" />
-          <p className="text-muted-foreground mb-12">{t(translations.contact.subtitle)}</p>
+          <div className="neon-line w-16 mb-4 mx-auto" />
+          <p className="text-muted-foreground text-sm">{t(translations.contact.subtitle)}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="glass rounded-2xl p-6 sm:p-8 space-y-5"
+            className="glass rounded-2xl p-6 sm:p-8 space-y-5 border border-border/50"
           >
             <div>
-              <label className="text-sm font-heading text-foreground mb-1 block">
-                {t(translations.contact.name)}
-              </label>
+              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.name)}</label>
               <input
                 type="text"
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full bg-muted/50 border border-border rounded-lg px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                className="w-full bg-muted/30 border border-border/50 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-all"
               />
             </div>
             <div>
-              <label className="text-sm font-heading text-foreground mb-1 block">
-                {t(translations.contact.email)}
-              </label>
+              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.email)}</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full bg-muted/50 border border-border rounded-lg px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                className="w-full bg-muted/30 border border-border/50 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-all"
               />
             </div>
             <div>
-              <label className="text-sm font-heading text-foreground mb-1 block">
-                {t(translations.contact.message)}
-              </label>
+              <label className="text-sm font-heading text-foreground mb-1.5 block">{t(translations.contact.message)}</label>
               <textarea
                 required
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full bg-muted/50 border border-border rounded-lg px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                className="w-full bg-muted/30 border border-border/50 rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-all resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-heading font-semibold text-sm py-3 rounded-lg hover:opacity-90 transition-all cyber-glow"
+              className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-heading font-semibold text-sm py-3.5 rounded-xl hover:opacity-90 transition-all cyber-glow"
             >
               {t(translations.contact.send)}
               <Send size={16} />
             </button>
           </motion.form>
 
+          {/* Links */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="flex flex-col justify-center gap-5"
+            className="flex flex-col justify-center gap-4"
           >
-            {[
-              { icon: Mail, label: "mus@hmdouche.com", href: "mailto:mus@hmdouche.com" },
-              { icon: Linkedin, label: "LinkedIn — Alaeddine Hamadouche", href: "https://linkedin.com/in/alaeddine-hamadouche-7681511b9" },
-            ].map((item, i) => (
-              <a
+            {links.map((item, i) => (
+              <motion.a
                 key={i}
                 href={item.href}
-                className="glass rounded-xl p-4 flex items-center gap-4 group hover:cyber-glow transition-all duration-300"
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                whileHover={{ x: 6 }}
+                className="glass rounded-xl p-5 flex items-center gap-4 group border border-border/50 hover:border-primary/30 transition-all duration-300"
               >
-                <item.icon size={22} className="text-primary" />
-                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                  <item.icon size={20} />
+                </div>
+                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors flex-1">
                   {item.label}
                 </span>
-              </a>
+                <ArrowUpRight size={16} className="text-muted-foreground/50 group-hover:text-primary transition-colors" />
+              </motion.a>
             ))}
-            <a
+
+            <motion.a
               href="/cv-finance-alaeddine-hamadouche.pdf"
               download
-              className="glass rounded-xl p-4 flex items-center gap-4 group gradient-border hover:cyber-glow transition-all duration-300"
+              whileHover={{ x: 6 }}
+              className="glass rounded-xl p-5 flex items-center gap-4 group border border-primary/30 hover:border-primary/50 transition-all duration-300"
             >
-              <Download size={22} className="text-accent" />
+              <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
+                <Download size={20} />
+              </div>
               <span className="text-sm font-heading font-medium text-foreground">
                 {t(translations.contact.downloadCV)}
               </span>
-            </a>
+            </motion.a>
           </motion.div>
         </div>
       </div>

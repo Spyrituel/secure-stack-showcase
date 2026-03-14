@@ -1,5 +1,15 @@
 import { useEffect, useRef } from "react";
 
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  color: string;
+  alpha: number;
+}
+
 const CyberBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -10,56 +20,78 @@ const CyberBackground = () => {
     if (!ctx) return;
 
     let animationId: number;
-    const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
-    const nodeCount = 60;
+    const particles: Particle[] = [];
+    const particleCount = 80;
+
+    const colors = [
+      "234, 88, 12",   // orange
+      "139, 92, 246",  // purple
+      "34, 197, 94",   // green
+      "59, 130, 246",  // blue
+    ];
 
     const resize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = document.documentElement.scrollHeight;
     };
     resize();
     window.addEventListener("resize", resize);
 
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
+    for (let i = 0; i < particleCount; i++) {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 3 + 1,
+        color,
+        alpha: Math.random() * 0.5 + 0.1,
       });
     }
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       // Draw connections
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 200) {
+          if (dist < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.08 * (1 - dist / 200)})`;
+            ctx.strokeStyle = `rgba(${particles[i].color}, ${0.03 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.5;
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
           }
         }
       }
 
-      // Draw nodes
-      for (const node of nodes) {
+      // Draw particles
+      for (const p of particles) {
         ctx.beginPath();
-        ctx.fillStyle = "rgba(59, 130, 246, 0.3)";
-        ctx.arc(node.x, node.y, 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
 
-        node.x += node.vx;
-        node.y += node.vy;
-        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+        // Glow effect for larger particles
+        if (p.size > 2) {
+          ctx.beginPath();
+          const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
+          gradient.addColorStop(0, `rgba(${p.color}, ${p.alpha * 0.3})`);
+          gradient.addColorStop(1, `rgba(${p.color}, 0)`);
+          ctx.fillStyle = gradient;
+          ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
       }
 
       animationId = requestAnimationFrame(draw);
