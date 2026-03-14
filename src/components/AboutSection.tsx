@@ -44,7 +44,7 @@ const AboutSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid lg:grid-cols-2 gap-16 items-center mb-20"
+          className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16 sm:mb-20"
         >
           {/* Photo side */}
           <motion.div custom={0} variants={fadeUp} className="flex justify-center">
