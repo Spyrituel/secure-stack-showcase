@@ -2,7 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
 import { labs } from "@/data/labs";
-import { Badge } from "@/components/ui/badge";
+import TechBadge from "@/components/TechBadge";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
