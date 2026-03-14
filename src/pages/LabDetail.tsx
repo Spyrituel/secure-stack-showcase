@@ -128,9 +128,10 @@ const LabDetail = () => {
                 )}
                 <div className="flex flex-wrap gap-2">
                   {lab.environment[lang].map((env) => (
-                    <Badge key={env} className="bg-muted text-muted-foreground border-0 text-xs">
+                    <div key={env} className="inline-flex items-center gap-1.5 bg-muted text-muted-foreground border-0 text-xs rounded-full px-3 py-1 font-semibold">
+                      <TechIcon name={env} size={12} className="text-primary/60" />
                       {env}
-                    </Badge>
+                    </div>
                   ))}
                 </div>
               </div>
