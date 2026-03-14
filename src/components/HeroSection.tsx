@@ -1,11 +1,85 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
 
+const roles = {
+  fr: [
+    "Administration Systèmes & Réseaux",
+    "Cybersécurité",
+    "AWS Cloud",
+    "Analyse de Logs & SIEM",
+  ],
+  en: [
+    "System & Network Administration",
+    "Cybersecurity",
+    "AWS Cloud",
+    "Log Analysis & SIEM",
+  ],
+};
+
+const useTypewriter = (words: string[], typingSpeed = 80, deletingSpeed = 40, pauseTime = 2000) => {
+  const [displayText, setDisplayText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayText(currentWord.slice(0, displayText.length + 1));
+        if (displayText.length === currentWord.length) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        setDisplayText(currentWord.slice(0, displayText.length - 1));
+        if (displayText.length === 0) {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, isDeleting ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
+
+  return displayText;
+};
+
+const letterVariants = {
+  hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { delay: 0.4 + i * 0.04, duration: 0.5, ease: [0.25, 0.1, 0, 1] },
+  }),
+};
+
+const TextReveal = ({ text, className, startDelay = 0 }: { text: string; className?: string; startDelay?: number }) => (
+  <span className={className}>
+    {text.split("").map((char, i) => (
+      <motion.span
+        key={`${char}-${i}`}
+        custom={i + startDelay}
+        variants={letterVariants}
+        initial="hidden"
+        animate="visible"
+        className="inline-block"
+        style={{ whiteSpace: char === " " ? "pre" : undefined }}
+      >
+        {char}
+      </motion.span>
+    ))}
+  </span>
+);
+
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const typewriterText = useTypewriter(roles[lang]);
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
@@ -43,23 +117,31 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        {/* Name */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4"
-        >
-          <span className="text-primary">Hamadouche</span>
+        {/* Name with text reveal */}
+        <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+          <TextReveal text="Hamadouche" className="text-primary" />
           <br />
-          <span className="text-foreground">Alaeddine</span>
-        </motion.h1>
+          <TextReveal text="Alaeddine" className="text-foreground" startDelay={10} />
+        </h1>
+
+        {/* Typewriter role */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="h-8 mb-6 flex items-center justify-center"
+        >
+          <span className="font-heading text-lg sm:text-xl text-primary font-semibold">
+            {typewriterText}
+          </span>
+          <span className="inline-block w-0.5 h-6 bg-primary ml-0.5 animate-pulse" />
+        </motion.div>
 
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
           className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-4"
         >
           {t({
@@ -79,7 +161,7 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 1.6 }}
           className="text-muted-foreground/70 text-sm sm:text-base max-w-xl mx-auto mb-10 leading-relaxed"
         >
           {t(translations.hero.summary)}
@@ -89,7 +171,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.6, delay: 1.8 }}
           className="flex flex-wrap justify-center gap-4"
         >
           <a
@@ -120,7 +202,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        transition={{ delay: 2.2, duration: 0.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <a href="#about" className="flex flex-col items-center gap-2 group">
