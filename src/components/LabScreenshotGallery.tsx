@@ -167,6 +167,7 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
           </div>
         </div>
 
+        {uploadMessage && <p className="text-xs text-primary mb-3">{uploadMessage}</p>}
 
         {allScreenshots.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
