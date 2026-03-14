@@ -43,7 +43,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>',
-        to: ['mus@hmdouche.com'],
+        to: ['mus.hamadouche7@gmail.com'],
         subject: 'New message from portfolio website',
         html: `
           <h2>New message from your portfolio</h2>
