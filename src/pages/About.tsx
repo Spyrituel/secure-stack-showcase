@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 import { Badge } from "@/components/ui/badge";
+import CVDropdown from "@/components/CVDropdown";
 import { toast } from "sonner";
 
 const stagger = {
@@ -128,14 +129,10 @@ const ProfileSection = () => {
                 </a>
               </div>
 
-              <a
-                href="/cv-finance-alaeddine-hamadouche.pdf"
-                download
-                className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-heading font-semibold text-sm py-3 rounded-xl hover:opacity-90 transition-all cyber-glow"
-              >
-                <Download size={15} />
-                {t({ fr: "Télécharger le CV", en: "Download CV" })}
-              </a>
+              <CVDropdown
+                className="mt-5 w-full"
+                buttonClassName="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-heading font-semibold text-sm py-3 rounded-xl hover:opacity-90 transition-all cyber-glow"
+              />
             </div>
           </motion.div>
 
