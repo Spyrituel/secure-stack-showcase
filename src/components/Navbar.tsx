@@ -105,14 +105,20 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden glass border-t border-border"
           >
-            <div className="px-6 py-4 flex flex-col gap-4">
-              {links.map((l) => renderLink(l, () => setOpen(false)))}
-              <button
-                onClick={() => { setLang(lang === "fr" ? "en" : "fr"); setOpen(false); }}
-                className="glass px-3 py-1.5 rounded-lg text-xs font-heading font-semibold text-primary self-start"
-              >
-                {lang === "fr" ? "EN" : "FR"}
-              </button>
+            <div className="px-6 py-4 flex flex-col gap-1">
+              {links.map((l) => (
+                <div key={l.href} className="py-2">
+                  {renderLink(l, () => setOpen(false))}
+                </div>
+              ))}
+              <div className="pt-2 mt-2 border-t border-border">
+                <button
+                  onClick={() => { setLang(lang === "fr" ? "en" : "fr"); setOpen(false); }}
+                  className="glass px-4 py-2 rounded-lg text-xs font-heading font-semibold text-primary"
+                >
+                  {lang === "fr" ? "EN" : "FR"}
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
