@@ -1,5 +1,11 @@
 import { Shield, Network, Flame, Bug, Lock, Key } from "lucide-react";
 
+export interface LabScreenshot {
+  src: string;
+  caption: { fr: string; en: string };
+  command?: string;
+}
+
 export interface Lab {
   id: string;
   slug: string;
@@ -13,6 +19,7 @@ export interface Lab {
   commands: string[];
   results: { fr: string[]; en: string[] };
   tech: string[];
+  screenshots?: LabScreenshot[];
 }
 
 export const labs: Lab[] = [
