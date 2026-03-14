@@ -658,7 +658,9 @@ const ContactAboutSection = () => {
 /* ═══════════════════════════════════════════
    PAGE
    ═══════════════════════════════════════════ */
-const About = () => (
+const About = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  return (
   <div className="relative min-h-screen overflow-x-hidden">
     <CyberBackground />
     <Navbar />
