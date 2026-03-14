@@ -44,7 +44,8 @@ const HeroSection = () => {
               <ArrowDown size={16} />
             </a>
             <a
-              href="#"
+              href="/cv-finance-alaeddine-hamadouche.pdf"
+              download
               className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
             >
               {t(translations.hero.cta2)}

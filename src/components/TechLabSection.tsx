@@ -1,4 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
+import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
 import { labs } from "@/data/labs";
 import { Badge } from "@/components/ui/badge";
@@ -10,20 +11,7 @@ const TechLabSection = () => {
   const { lang, t } = useLanguage();
   const navigate = useNavigate();
 
-  const sectionTitle = {
-    fr: "Labs pratiques en Cybersécurité",
-    en: "Cybersecurity Practical Labs",
-  };
-
-  const subtitle = {
-    fr: "Labs de sécurité pratiques réalisés pendant la formation et la pratique personnelle.",
-    en: "Hands-on security labs completed during training and personal practice.",
-  };
-
-  const viewDetails = {
-    fr: "Voir les détails",
-    en: "View Details",
-  };
+  const viewLab = { fr: "Voir le lab", en: "View Lab" };
 
   return (
     <section id="lab" className="py-24 px-6 relative z-10">
@@ -36,10 +24,10 @@ const TechLabSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-2 gradient-text">
-            {t(sectionTitle)}
+            {t(translations.lab.title)}
           </h2>
           <div className="neon-line w-20 mb-4 mx-auto" />
-          <p className="text-muted-foreground text-sm">{t(subtitle)}</p>
+          <p className="text-muted-foreground text-sm">{t(translations.lab.subtitle)}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,7 +45,6 @@ const TechLabSection = () => {
                 className="glass rounded-2xl gradient-border cursor-pointer group flex flex-col"
               >
                 <div className="p-6 flex flex-col flex-1">
-                  {/* Header */}
                   <div className="flex items-start gap-3 mb-4">
                     <div className="p-2.5 rounded-xl bg-primary/10 text-primary shrink-0">
                       <Icon size={22} />
@@ -72,7 +59,6 @@ const TechLabSection = () => {
                     </div>
                   </div>
 
-                  {/* Progress */}
                   <div className="mb-4">
                     <div className="flex justify-between items-center mb-1.5">
                       <span className="text-xs text-muted-foreground">
@@ -82,18 +68,13 @@ const TechLabSection = () => {
                         {lab.progress}%
                       </span>
                     </div>
-                    <Progress
-                      value={lab.progress}
-                      className="h-1.5 bg-muted"
-                    />
+                    <Progress value={lab.progress} className="h-1.5 bg-muted" />
                   </div>
 
-                  {/* Description */}
                   <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">
                     {t(lab.shortDesc)}
                   </p>
 
-                  {/* Tech tags */}
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {lab.tech.slice(0, 4).map((tech) => (
                       <Badge
@@ -114,9 +95,8 @@ const TechLabSection = () => {
                     )}
                   </div>
 
-                  {/* CTA */}
                   <div className="flex items-center gap-1.5 text-xs font-medium text-primary group-hover:gap-2.5 transition-all duration-300">
-                    {t(viewDetails)}
+                    {t(viewLab)}
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>

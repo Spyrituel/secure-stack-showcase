@@ -12,9 +12,10 @@ const Navbar = () => {
 
   const links = [
     { href: "/", label: t({ fr: "Accueil", en: "Home" }), isRoute: true },
-    { href: "/about", label: t(translations.nav.about), isRoute: true },
     { href: "#lab", label: t(translations.nav.lab) },
     { href: "#projects", label: t(translations.nav.projects) },
+    { href: "#certifications", label: t(translations.nav.certifications) },
+    { href: "/about", label: t(translations.nav.about), isRoute: true },
     { href: "#contact", label: t(translations.nav.contact) },
   ];
 
@@ -28,7 +29,6 @@ const Navbar = () => {
         </Link>
       );
     }
-    // For hash links, if we're not on home, navigate to home first
     const target = location.pathname === "/" ? l.href : `/${l.href}`;
     return (
       <a key={l.href} href={target} onClick={onClick} className={linkClass}>

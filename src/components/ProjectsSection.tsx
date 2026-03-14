@@ -18,7 +18,10 @@ const ProjectsSection = () => {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-2 gradient-text">
             {t(translations.projects.title)}
           </h2>
-          <div className="neon-line w-20 mb-12" />
+          <div className="neon-line w-20 mb-4" />
+          <p className="text-muted-foreground text-sm mb-12">
+            {t(translations.projects.intro)}
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -59,7 +62,7 @@ const ProjectsSection = () => {
                     href="#"
                     className="inline-flex items-center gap-1.5 text-sm font-heading font-medium text-primary hover:underline"
                   >
-                    {t(translations.projects.viewDetails)}
+                    {t(translations.projects.viewProject)}
                     <ExternalLink size={14} />
                   </a>
                   <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
