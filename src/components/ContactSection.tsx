@@ -1,7 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Download, Send, ArrowUpRight, Loader2 } from "lucide-react";
+import { Mail, Linkedin, Github, Send, ArrowUpRight, Loader2 } from "lucide-react";
+import CVDropdown from "@/components/CVDropdown";
 import { useState } from "react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
