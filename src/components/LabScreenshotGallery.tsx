@@ -257,7 +257,14 @@ const LabScreenshotGallery = ({ screenshots, labSlug, videoUrl }: LabScreenshotG
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-5xl w-full max-h-[90vh] flex flex-col"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.3}
+              onDragEnd={(_, info) => {
+                if (info.offset.x > 80 && lightboxIndex > 0) setLightboxIndex(lightboxIndex - 1);
+                if (info.offset.x < -80 && lightboxIndex < allScreenshots.length - 1) setLightboxIndex(lightboxIndex + 1);
+              }}
+              className="relative max-w-5xl w-full max-h-[90vh] flex flex-col touch-pan-y"
               onClick={(e) => e.stopPropagation()}
             >
               <button
