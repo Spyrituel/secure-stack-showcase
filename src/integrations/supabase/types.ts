@@ -25,7 +25,7 @@ export type Database = {
           lab_slug: string
           sort_order: number
           updated_at: string
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           caption_en: string
@@ -37,7 +37,7 @@ export type Database = {
           lab_slug: string
           sort_order?: number
           updated_at?: string
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           caption_en?: string
@@ -49,7 +49,7 @@ export type Database = {
           lab_slug?: string
           sort_order?: number
           updated_at?: string
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: []
       }
