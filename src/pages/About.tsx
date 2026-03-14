@@ -33,9 +33,15 @@ const IntroSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="w-52 h-52 rounded-2xl glass gradient-border flex items-center justify-center overflow-hidden"
+              whileHover={{ scale: 1.03 }}
+              className="w-52 h-52 md:w-64 md:h-64 rounded-2xl glass gradient-border overflow-hidden shadow-lg shadow-primary/10"
             >
-              <User size={80} className="text-primary/40" />
+              <img
+                src={profilePhoto}
+                alt="Alaeddine Hamadouche"
+                loading="lazy"
+                className="w-full h-full object-cover object-top"
+              />
             </motion.div>
           </div>
 

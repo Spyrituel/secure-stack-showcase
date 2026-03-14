@@ -61,10 +61,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="hidden md:flex justify-center"
         >
-          <div className="relative w-72 h-72 lg:w-80 lg:h-80">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 animate-pulse-glow" />
-            <div className="absolute inset-4 rounded-full glass gradient-border flex items-center justify-center">
-              <div className="text-6xl font-heading font-bold gradient-text">AH</div>
+          <div className="relative w-72 h-72 lg:w-80 lg:h-80 group">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse-glow" />
+            <div className="absolute inset-2 rounded-full overflow-hidden gradient-border">
+              <img
+                src={profilePhoto}
+                alt="Alaeddine Hamadouche"
+                loading="lazy"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
           </div>
         </motion.div>
