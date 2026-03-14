@@ -101,6 +101,7 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
           caption_fr: generatedCaption,
           caption_en: generatedCaption,
           sort_order: startOrder + index,
+          user_id: null,
         });
 
         return { ok: !insertError };
