@@ -5,33 +5,33 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     key: "networking" as const,
-    skills: ["TCP/IP", "DNS", "DHCP", "VLAN", "Routing", "Network Troubleshooting"],
+    skills: ["TCP/IP", "DNS", "DHCP", "VLAN", "Routing"],
     color: "from-primary/20 to-primary/5",
   },
   {
     key: "sysadmin" as const,
-    skills: ["Linux", "Windows Server", "Active Directory", "Virtualization"],
+    skills: ["Linux", "Windows Server", "Active Directory", "Virtualisation"],
     color: "from-secondary/20 to-secondary/5",
   },
   {
     key: "security" as const,
-    skills: ["Vulnerability Analysis", "Network Monitoring", "Security Hardening", "IDS/IPS"],
+    skills: ["Hardening", "IDS/IPS", "Analyse de vulnérabilités", "Pare-feu"],
     color: "from-primary/15 to-secondary/10",
   },
   {
     key: "cloud" as const,
-    skills: ["AWS Fundamentals", "EC2", "S3", "IAM", "VPC", "Cloud Architecture"],
+    skills: ["EC2", "S3", "IAM", "VPC", "CloudWatch"],
     color: "from-primary/20 to-accent/10",
   },
   {
-    key: "finance" as const,
-    skills: ["Financial Analysis", "Risk Analysis", "Data Interpretation", "Business Decision Analysis"],
-    color: "from-accent/20 to-accent/5",
+    key: "monitoring" as const,
+    skills: ["Syslog", "Wireshark", "Nmap", "SIEM", "Bash"],
+    color: "from-primary/10 to-secondary/10",
   },
   {
-    key: "tools" as const,
-    skills: ["Wireshark", "Nmap", "OWASP ZAP", "Git", "Bash / PowerShell"],
-    color: "from-primary/10 to-secondary/10",
+    key: "finance" as const,
+    skills: ["Power BI", "Analyse financière", "Gestion des risques"],
+    color: "from-accent/20 to-accent/5",
   },
 ];
 

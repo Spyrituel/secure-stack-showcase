@@ -1,13 +1,14 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import { Shield, Terminal, Cloud, Network, Server, TrendingUp } from "lucide-react";
+import { Shield, Terminal, Cloud, Network, Server, TrendingUp, Activity, BarChart3 } from "lucide-react";
 
 const skills = [
-  { icon: Network, label: { fr: "Réseaux", en: "Networking" } },
-  { icon: Terminal, label: { fr: "Linux", en: "Linux" } },
-  { icon: Shield, label: { fr: "Cybersécurité", en: "Cybersecurity" } },
+  { icon: Network, label: { fr: "Réseaux & TCP/IP", en: "Networking & TCP/IP" } },
+  { icon: Terminal, label: { fr: "Linux & Admin Système", en: "Linux & Sysadmin" } },
+  { icon: Shield, label: { fr: "Sécurité & Hardening", en: "Security & Hardening" } },
+  { icon: Activity, label: { fr: "Monitoring & Logs", en: "Monitoring & Logs" } },
   { icon: Cloud, label: { fr: "AWS Cloud", en: "AWS Cloud" } },
-  { icon: Server, label: { fr: "Administration Système", en: "System Administration" } },
+  { icon: BarChart3, label: { fr: "Power BI & Data", en: "Power BI & Data" } },
   { icon: TrendingUp, label: { fr: "Analyse des Risques", en: "Risk Analysis" } },
 ];
 

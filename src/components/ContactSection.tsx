@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Download, Send } from "lucide-react";
+import { Mail, Linkedin, Download, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 

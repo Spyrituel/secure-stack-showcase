@@ -10,63 +10,23 @@ const AwsCloudSection = () => {
   const { lang, t } = useLanguage();
   const navigate = useNavigate();
 
-  const sectionTitle = {
-    fr: "Projets & Labs Cloud AWS",
-    en: "AWS Cloud Projects & Labs",
-  };
+  const sectionTitle = { fr: "Cloud AWS", en: "AWS Cloud" };
   const sectionSubtitle = {
-    fr: "Exercices pratiques d'infrastructure cloud basés sur la formation AWS Cloud Practitioner.",
-    en: "Hands-on cloud infrastructure exercises based on AWS Cloud Practitioner training.",
+    fr: "Fondamentaux du cloud AWS et labs réalisés dans le cadre de la préparation à la certification Cloud Practitioner.",
+    en: "AWS cloud fundamentals and labs completed as part of Cloud Practitioner certification preparation.",
   };
-  const foundationsTitle = {
-    fr: "Fondamentaux AWS Cloud",
-    en: "AWS Cloud Foundations",
-  };
-  const foundationsDesc = {
-    fr: "Formation aux concepts fondamentaux du cloud computing avec Amazon Web Services, incluant les modèles de service cloud, l'architecture AWS et les bonnes pratiques de sécurité.",
-    en: "Training on the fundamentals of cloud computing using Amazon Web Services, including cloud service models, AWS architecture, and security best practices.",
-  };
-  const foundationsTopics = {
-    fr: [
-      "Fondamentaux du cloud computing",
-      "Infrastructure globale AWS",
-      "Modèle de responsabilité partagée",
-      "Concepts de tarification et facturation",
-      "Principes d'architecture cloud",
-    ],
-    en: [
-      "Cloud computing fundamentals",
-      "AWS global infrastructure",
-      "Shared responsibility model",
-      "Pricing and billing concepts",
-      "Cloud architecture principles",
-    ],
-  };
-  const servicesTitle = {
-    fr: "Services AWS Découverts",
-    en: "AWS Services Discovered",
-  };
-  const labsTitle = {
-    fr: "Labs Cloud AWS",
-    en: "AWS Cloud Labs",
-  };
-  const viewDetails = {
-    fr: "Voir les détails",
-    en: "View Details",
-  };
-  const certTitle = {
-    fr: "AWS Cloud Practitioner Training",
-    en: "AWS Cloud Practitioner Training",
-  };
+  const servicesTitle = { fr: "Services AWS maîtrisés", en: "AWS Services Covered" };
+  const labsTitle = { fr: "Labs Cloud AWS", en: "AWS Cloud Labs" };
+  const viewLab = { fr: "Voir le lab", en: "View Lab" };
+  const certTitle = { fr: "AWS Cloud Practitioner Training", en: "AWS Cloud Practitioner Training" };
   const certDesc = {
-    fr: "Formation aux bases du cloud AWS couvrant l'architecture, la sécurité, les services principaux et les principes de gestion du cloud.",
-    en: "Training covering AWS cloud fundamentals, architecture, security, core services, and cloud management principles.",
+    fr: "Architecture cloud, services principaux, sécurité et modèle de responsabilité partagée AWS.",
+    en: "Cloud architecture, core services, security and AWS shared responsibility model.",
   };
 
   return (
     <section id="aws" className="py-24 px-6 relative z-10">
       <div className="container mx-auto max-w-6xl">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,41 +65,12 @@ const AwsCloudSection = () => {
           </Badge>
         </motion.div>
 
-        {/* Foundations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="glass rounded-2xl gradient-border p-6 mb-12"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
-              <Cloud size={22} />
-            </div>
-            <h3 className="font-heading text-lg font-semibold text-foreground">
-              {t(foundationsTitle)}
-            </h3>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-            {t(foundationsDesc)}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {foundationsTopics[lang].map((topic, i) => (
-              <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                <span className="text-primary mt-0.5">▹</span>
-                {topic}
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-12"
         >
           <h3 className="font-heading text-xl font-semibold text-foreground mb-6 text-center">
@@ -236,7 +167,7 @@ const AwsCloudSection = () => {
                   </div>
 
                   <div className="flex items-center gap-1.5 text-xs font-medium text-primary group-hover:gap-2.5 transition-all duration-300">
-                    {t(viewDetails)}
+                    {t(viewLab)}
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>

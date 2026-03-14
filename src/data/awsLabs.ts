@@ -27,8 +27,8 @@ export const awsServices: AwsService[] = [
     name: "Amazon EC2",
     category: { fr: "Calcul", en: "Compute" },
     desc: {
-      fr: "Serveurs virtuels pour déployer et gérer une infrastructure cloud évolutive.",
-      en: "Virtual servers used to deploy and manage scalable cloud infrastructure.",
+      fr: "Déploiement de serveurs virtuels pour héberger des applications et environnements de test sécurisés.",
+      en: "Deploy virtual servers to host applications and secure test environments.",
     },
     icon: Server,
   },
@@ -36,8 +36,8 @@ export const awsServices: AwsService[] = [
     name: "Amazon S3",
     category: { fr: "Stockage", en: "Storage" },
     desc: {
-      fr: "Service de stockage d'objets pour stocker et récupérer des données à grande échelle.",
-      en: "Object storage service to store and retrieve data at any scale.",
+      fr: "Stockage d'objets pour sauvegarder logs, backups et fichiers de configuration à grande échelle.",
+      en: "Object storage for saving logs, backups and configuration files at scale.",
     },
     icon: HardDrive,
   },
@@ -45,8 +45,8 @@ export const awsServices: AwsService[] = [
     name: "Amazon VPC",
     category: { fr: "Réseau", en: "Networking" },
     desc: {
-      fr: "Réseau virtuel isolé pour lancer des ressources AWS dans un environnement défini.",
-      en: "Isolated virtual network to launch AWS resources in a defined environment.",
+      fr: "Réseau virtuel isolé pour segmenter et sécuriser les ressources cloud.",
+      en: "Isolated virtual network to segment and secure cloud resources.",
     },
     icon: Network,
   },
@@ -54,8 +54,8 @@ export const awsServices: AwsService[] = [
     name: "Elastic Load Balancing",
     category: { fr: "Réseau", en: "Networking" },
     desc: {
-      fr: "Distribution automatique du trafic entrant sur plusieurs cibles.",
-      en: "Automatically distribute incoming traffic across multiple targets.",
+      fr: "Répartition automatique du trafic pour assurer haute disponibilité et tolérance aux pannes.",
+      en: "Automatic traffic distribution for high availability and fault tolerance.",
     },
     icon: Activity,
   },
@@ -63,8 +63,8 @@ export const awsServices: AwsService[] = [
     name: "IAM",
     category: { fr: "Sécurité", en: "Security" },
     desc: {
-      fr: "Gestion des identités et des accès pour contrôler l'accès aux ressources AWS.",
-      en: "Identity and Access Management to control access to AWS resources.",
+      fr: "Gestion des identités et accès : utilisateurs, rôles et principe du moindre privilège.",
+      en: "Identity and access management: users, roles and least privilege principle.",
     },
     icon: ShieldCheck,
   },
@@ -72,8 +72,8 @@ export const awsServices: AwsService[] = [
     name: "Amazon CloudWatch",
     category: { fr: "Monitoring", en: "Monitoring" },
     desc: {
-      fr: "Surveillance des ressources et applications cloud en temps réel.",
-      en: "Monitor cloud resources and applications in real time.",
+      fr: "Surveillance des ressources cloud : métriques, alarmes et analyse de logs en temps réel.",
+      en: "Cloud resource monitoring: metrics, alarms and real-time log analysis.",
     },
     icon: Activity,
   },
@@ -86,16 +86,16 @@ export const awsLabs: AwsLab[] = [
     icon: Globe,
     progress: 100,
     title: {
-      fr: "Infrastructure Globale AWS",
-      en: "AWS Global Infrastructure",
+      fr: "Cartographie de l'infrastructure AWS",
+      en: "AWS Infrastructure Mapping",
     },
     shortDesc: {
-      fr: "Comprendre les Régions AWS, les Zones de Disponibilité et les Edge Locations.",
-      en: "Understanding AWS Regions, Availability Zones, and Edge Locations.",
+      fr: "Étude des Régions, Zones de Disponibilité et Edge Locations pour comprendre l'architecture globale AWS.",
+      en: "Studied Regions, Availability Zones and Edge Locations to understand AWS global architecture.",
     },
     fullDesc: {
-      fr: "Ce lab explore l'infrastructure globale d'Amazon Web Services. Il couvre la compréhension des Régions, des Zones de Disponibilité et des Edge Locations, ainsi que leur impact sur la disponibilité, la latence et la résilience des applications.",
-      en: "This lab explores the global infrastructure of Amazon Web Services. It covers understanding Regions, Availability Zones, and Edge Locations, and their impact on application availability, latency, and resilience.",
+      fr: "Exploration de l'infrastructure globale AWS : Régions, Zones de Disponibilité et Edge Locations, avec analyse de leur impact sur la disponibilité et la résilience.",
+      en: "Explored AWS global infrastructure: Regions, Availability Zones and Edge Locations, analyzing their impact on availability and resilience.",
     },
     objectives: {
       fr: [
@@ -136,16 +136,16 @@ export const awsLabs: AwsLab[] = [
     icon: Server,
     progress: 100,
     title: {
-      fr: "Lancement d'un Serveur Virtuel",
-      en: "Launching a Virtual Server",
+      fr: "Lancement et configuration d'un serveur EC2",
+      en: "EC2 Server Launch & Configuration",
     },
     shortDesc: {
-      fr: "Création et configuration d'une instance EC2 dans le cloud AWS.",
-      en: "Creating and configuring an EC2 instance in the AWS cloud.",
+      fr: "Création d'une instance EC2, configuration des Security Groups et déploiement d'un serveur web.",
+      en: "Created an EC2 instance, configured Security Groups and deployed a web server.",
     },
     fullDesc: {
-      fr: "Ce lab couvre la création, la configuration et la gestion d'une instance EC2. Il inclut le choix du type d'instance, la configuration des groupes de sécurité, la connexion SSH et le déploiement d'un service web basique.",
-      en: "This lab covers creating, configuring, and managing an EC2 instance. It includes choosing instance types, configuring security groups, SSH connection, and deploying a basic web service.",
+      fr: "Création, configuration et gestion d'une instance EC2 : choix du type, Security Groups, connexion SSH et déploiement d'un service web.",
+      en: "Created, configured and managed an EC2 instance: type selection, Security Groups, SSH connection and web service deployment.",
     },
     objectives: {
       fr: [
@@ -187,16 +187,16 @@ export const awsLabs: AwsLab[] = [
     icon: HardDrive,
     progress: 100,
     title: {
-      fr: "Stockage Cloud avec Amazon S3",
-      en: "Cloud Storage with Amazon S3",
+      fr: "Gestion du stockage cloud S3",
+      en: "S3 Cloud Storage Management",
     },
     shortDesc: {
-      fr: "Upload et gestion d'objets dans des buckets S3.",
-      en: "Uploading and managing objects in S3 buckets.",
+      fr: "Création de buckets S3, gestion des permissions, versioning et politiques de cycle de vie.",
+      en: "Created S3 buckets, managed permissions, versioning and lifecycle policies.",
     },
     fullDesc: {
-      fr: "Ce lab explore le service de stockage Amazon S3. Il couvre la création de buckets, l'upload d'objets, la gestion des permissions, le versioning et les politiques de cycle de vie.",
-      en: "This lab explores the Amazon S3 storage service. It covers bucket creation, object uploads, permission management, versioning, and lifecycle policies.",
+      fr: "Exploration d'Amazon S3 : création de buckets, gestion des permissions et politiques d'accès, versioning et lifecycle policies.",
+      en: "Explored Amazon S3: bucket creation, permission and access policy management, versioning and lifecycle policies.",
     },
     objectives: {
       fr: [
@@ -238,16 +238,16 @@ export const awsLabs: AwsLab[] = [
     icon: ShieldCheck,
     progress: 100,
     title: {
-      fr: "Identity & Access Management",
-      en: "Identity & Access Management",
+      fr: "Gestion des identités et accès IAM",
+      en: "IAM Identity & Access Management",
     },
     shortDesc: {
-      fr: "Création d'utilisateurs, rôles et permissions IAM.",
-      en: "Creating IAM users, roles, and permissions.",
+      fr: "Création d'utilisateurs et groupes IAM, attribution de politiques et application du moindre privilège.",
+      en: "Created IAM users and groups, assigned policies and applied least privilege principle.",
     },
     fullDesc: {
-      fr: "Ce lab couvre la gestion des identités et des accès avec AWS IAM. Il inclut la création d'utilisateurs et de groupes, l'attribution de politiques, la configuration de rôles et l'application du principe du moindre privilège.",
-      en: "This lab covers identity and access management with AWS IAM. It includes creating users and groups, assigning policies, configuring roles, and applying the principle of least privilege.",
+      fr: "Gestion IAM complète : utilisateurs, groupes, politiques d'accès, rôles pour les services et principe du moindre privilège.",
+      en: "Complete IAM management: users, groups, access policies, service roles and least privilege principle.",
     },
     objectives: {
       fr: [
@@ -289,16 +289,16 @@ export const awsLabs: AwsLab[] = [
     icon: Activity,
     progress: 100,
     title: {
-      fr: "Monitoring des Ressources Cloud",
-      en: "Monitoring Cloud Resources",
+      fr: "Monitoring cloud avec CloudWatch",
+      en: "Cloud Monitoring with CloudWatch",
     },
     shortDesc: {
-      fr: "Utilisation de CloudWatch pour surveiller les métriques et logs système.",
-      en: "Using CloudWatch to monitor system metrics and logs.",
+      fr: "Création de dashboards, configuration d'alarmes et analyse de logs pour la surveillance des ressources cloud.",
+      en: "Created dashboards, configured alarms and analyzed logs for cloud resource monitoring.",
     },
     fullDesc: {
-      fr: "Ce lab explore Amazon CloudWatch pour la surveillance des ressources cloud. Il couvre la création de dashboards, la configuration d'alarmes, l'analyse des métriques et la gestion des logs.",
-      en: "This lab explores Amazon CloudWatch for cloud resource monitoring. It covers creating dashboards, configuring alarms, analyzing metrics, and managing logs.",
+      fr: "Surveillance des ressources cloud avec CloudWatch : dashboards, alarmes sur métriques EC2, analyse des logs et automatisation des réponses. Lien direct avec la sécurité : monitoring des accès et détection d'anomalies.",
+      en: "Cloud resource monitoring with CloudWatch: dashboards, EC2 metric alarms, log analysis and response automation. Direct security link: access monitoring and anomaly detection.",
     },
     objectives: {
       fr: [

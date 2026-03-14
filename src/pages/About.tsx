@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import {
   Shield, Server, Network, TrendingUp, Cloud, BarChart3,
   GraduationCap, Award, ArrowRight, Mail, Linkedin, Download, Send,
-  User, BookOpen, Cpu, Lock
+  User, BookOpen, Lock, Activity
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
@@ -26,7 +26,6 @@ const IntroSection = () => {
     <section className="pt-32 pb-20 px-6 relative z-10">
       <div className="container mx-auto max-w-5xl">
         <motion.div {...fadeUp} className="grid md:grid-cols-[280px_1fr] gap-10 items-start">
-          {/* Avatar placeholder */}
           <div className="flex justify-center md:justify-start">
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
@@ -48,20 +47,20 @@ const IntroSection = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
               <p>
                 {t({
-                  fr: "Mon parcours a commencé dans le domaine de la finance et de la comptabilité, où j'ai développé une solide capacité d'analyse, de rigueur et de compréhension des mécanismes de gestion des risques. Progressivement, mon intérêt pour les technologies et les infrastructures informatiques m'a conduit à me réorienter vers l'administration des systèmes et réseaux ainsi que la cybersécurité.",
-                  en: "My journey started in finance and accounting, where I developed strong analytical skills, rigor, and an understanding of risk management mechanisms. Gradually, my interest in technology and IT infrastructure led me to transition toward systems and network administration as well as cybersecurity.",
+                  fr: "Étudiant en administration et sécurité des systèmes, réseaux et cloud. Je recherche un poste junior en cybersécurité opérationnelle, administration système ou support infrastructure.",
+                  en: "Student in system, network and cloud administration & security. Seeking a junior role in operational cybersecurity, system administration or infrastructure support.",
                 })}
               </p>
               <p>
                 {t({
-                  fr: "Aujourd'hui, je construis activement mes compétences techniques à travers des formations spécialisées, des projets pratiques et des laboratoires techniques en administration système, réseaux et sécurité. Cette transition me permet de combiner une approche analytique issue de la finance avec une expertise technique orientée vers la protection des systèmes et la fiabilité des infrastructures.",
-                  en: "Today, I am actively building my technical skills through specialized training, hands-on projects, and technical labs in system administration, networking, and security. This transition allows me to combine an analytical approach from finance with technical expertise focused on system protection and infrastructure reliability.",
+                  fr: "Mon parcours : finance et comptabilité → analyse de données (Power BI, PL-300) → administration système et réseaux → cybersécurité et cloud AWS. Cette transition me permet de combiner rigueur analytique et compétences techniques.",
+                  en: "My path: finance & accounting → data analytics (Power BI, PL-300) → system & network administration → cybersecurity & AWS cloud. This transition lets me combine analytical rigor with technical skills.",
                 })}
               </p>
               <p>
                 {t({
-                  fr: "Curieux, rigoureux et orienté résolution de problèmes, je poursuis actuellement ma formation avec l'objectif d'intégrer un environnement IT où je pourrai contribuer à la sécurisation des infrastructures, à l'optimisation des systèmes et à la gestion des risques technologiques.",
-                  en: "Curious, rigorous, and problem-solving oriented, I am currently pursuing my training with the goal of joining an IT environment where I can contribute to infrastructure security, system optimization, and technology risk management.",
+                  fr: "Je construis mes compétences à travers des formations spécialisées, des labs pratiques et des projets techniques en sécurité, réseaux et cloud. Objectif : contribuer à la sécurisation des infrastructures et à la gestion des risques technologiques.",
+                  en: "I build my skills through specialized training, hands-on labs and technical projects in security, networking and cloud. Goal: contribute to infrastructure security and technology risk management.",
                 })}
               </p>
             </div>
@@ -79,7 +78,7 @@ const educationItems = [
     icon: GraduationCap,
     title: { fr: "AEC — Gestion de Systèmes et Réseaux Informatiques", en: "AEC — IT Systems and Network Management" },
     institution: { fr: "Cégep de Sherbrooke (Programme délocalisé à INSIM Alger)", en: "Cégep de Sherbrooke (Remote program at INSIM Algiers)" },
-    desc: { fr: "Programme technique orienté vers l'administration des systèmes informatiques, l'infrastructure réseau et la gestion des services IT.", en: "Technical program focused on IT systems administration, network infrastructure and IT service management." },
+    desc: { fr: "Administration système, infrastructure réseau et gestion des services IT.", en: "System administration, network infrastructure and IT service management." },
     status: { fr: "En cours", en: "In Progress" },
   },
   {
@@ -87,37 +86,37 @@ const educationItems = [
     icon: Server,
     title: { fr: "BTS Administration et Sécurité des Systèmes et Réseaux", en: "BTS System and Network Administration & Security" },
     institution: { fr: "INSIM Alger", en: "INSIM Algiers" },
-    desc: { fr: "Formation de deux ans spécialisée dans l'administration des infrastructures réseau, la gestion des systèmes informatiques et la sécurité des environnements IT.", en: "Two-year program specializing in network infrastructure administration, IT systems management, and IT environment security." },
+    desc: { fr: "Administration réseau, gestion des systèmes et sécurité IT.", en: "Network administration, systems management and IT security." },
     status: { fr: "En cours", en: "In Progress" },
   },
   {
     year: "Nov. 2025 – Mars 2026",
     icon: Shield,
-    title: { fr: "Formation Introduction à la Cybersécurité", en: "Introduction to Cybersecurity Training" },
+    title: { fr: "Formation Cybersécurité", en: "Cybersecurity Training" },
     institution: { fr: "GoMyCode", en: "GoMyCode" },
-    desc: { fr: "Fondamentaux de la cybersécurité, menaces informatiques, vulnérabilités, architectures de sécurité et concepts de défense.", en: "Cybersecurity fundamentals, cyber threats, vulnerabilities, security architectures and defense concepts." },
+    desc: { fr: "Menaces, vulnérabilités, architectures de sécurité et défense des infrastructures.", en: "Threats, vulnerabilities, security architectures and infrastructure defense." },
   },
   {
     year: "Nov. 2025 – Mars 2026",
     icon: Cloud,
     title: { fr: "Formation AWS Cloud Practitioner", en: "AWS Cloud Practitioner Training" },
     institution: { fr: "GoMyCode", en: "GoMyCode" },
-    desc: { fr: "Concepts fondamentaux du cloud computing avec AWS : EC2, S3, IAM, VPC et bonnes pratiques de sécurité.", en: "Foundational cloud computing concepts with AWS: EC2, S3, IAM, VPC and security best practices." },
+    desc: { fr: "Cloud AWS : EC2, S3, IAM, VPC et modèle de responsabilité partagée.", en: "AWS cloud: EC2, S3, IAM, VPC and shared responsibility model." },
   },
   {
     year: "2025",
     icon: BarChart3,
-    title: { fr: "Microsoft Power BI Data Analyst Associate (PL-300)", en: "Microsoft Power BI Data Analyst Associate (PL-300)" },
+    title: { fr: "Microsoft Power BI Data Analyst (PL-300)", en: "Microsoft Power BI Data Analyst (PL-300)" },
     institution: { fr: "Microsoft Certified", en: "Microsoft Certified" },
-    desc: { fr: "Certification validant les compétences en analyse de données, modélisation, visualisation et création de tableaux de bord avec Power BI.", en: "Certification validating skills in data analysis, modeling, visualization and dashboard creation with Power BI." },
+    desc: { fr: "Analyse de données, modélisation et dashboards Power BI.", en: "Data analysis, modeling and Power BI dashboards." },
     badge: true,
   },
   {
     year: "2020 – 2023",
     icon: BookOpen,
-    title: { fr: "Bachelor en Finance et Comptabilité", en: "Bachelor in Finance and Accounting" },
-    institution: { fr: "PPA Business School — Programme en partenariat avec HIMI Alger", en: "PPA Business School — Partnership program with HIMI Algiers" },
-    desc: { fr: "Formation en finance, analyse financière, comptabilité et gestion d'entreprise.", en: "Training in finance, financial analysis, accounting and business management." },
+    title: { fr: "Bachelor Finance et Comptabilité", en: "Bachelor in Finance and Accounting" },
+    institution: { fr: "PPA Business School — Partenariat HIMI Alger", en: "PPA Business School — Partnership with HIMI Algiers" },
+    desc: { fr: "Finance, analyse financière, comptabilité et gestion d'entreprise.", en: "Finance, financial analysis, accounting and business management." },
   },
 ];
 
@@ -128,14 +127,13 @@ const EducationSection = () => {
       <div className="container mx-auto max-w-3xl">
         <motion.div {...fadeUp}>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-2 gradient-text">
-            {t({ fr: "Formations & Parcours Académique", en: "Education & Academic Background" })}
+            {t({ fr: "Formation & Parcours", en: "Education & Background" })}
           </h2>
           <div className="neon-line w-20 mb-12" />
         </motion.div>
 
         <div className="relative">
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-accent opacity-30" />
-
           <div className="space-y-8">
             {educationItems.map((item, i) => {
               const Icon = item.icon;
@@ -187,12 +185,12 @@ const EducationSection = () => {
 
 /* ─── 3. SKILLS ─── */
 const skillCategories = [
-  { title: { fr: "Réseaux", en: "Networking" }, icon: Network, skills: ["TCP/IP", "DNS", "DHCP", "VLAN", "Routing"], color: "from-primary/20 to-primary/5" },
-  { title: { fr: "Administration Système", en: "System Administration" }, icon: Server, skills: ["Linux", "Windows Server", "Virtualization", "Active Directory"], color: "from-secondary/20 to-secondary/5" },
-  { title: { fr: "Cybersécurité", en: "Cybersecurity" }, icon: Lock, skills: ["Vulnerability analysis", "Security monitoring", "IDS/IPS", "Network security"], color: "from-primary/15 to-secondary/10" },
-  { title: { fr: "Cloud", en: "Cloud" }, icon: Cloud, skills: ["AWS fundamentals", "EC2", "S3", "IAM", "VPC"], color: "from-primary/20 to-accent/10" },
-  { title: { fr: "Data & Analytics", en: "Data & Analytics" }, icon: BarChart3, skills: ["Power BI", "Data visualization", "Analytical thinking"], color: "from-accent/20 to-accent/5" },
-  { title: { fr: "Finance & Risques", en: "Finance & Risk Analysis" }, icon: TrendingUp, skills: ["Financial analysis", "Risk management", "Business analysis"], color: "from-accent/15 to-primary/10" },
+  { title: { fr: "Réseaux & TCP/IP", en: "Networking & TCP/IP" }, icon: Network, skills: ["TCP/IP", "DNS", "DHCP", "VLAN", "Routing"], color: "from-primary/20 to-primary/5" },
+  { title: { fr: "Linux & Admin Système", en: "Linux & Sysadmin" }, icon: Server, skills: ["Linux", "Windows Server", "Virtualisation", "Active Directory"], color: "from-secondary/20 to-secondary/5" },
+  { title: { fr: "Sécurité & Hardening", en: "Security & Hardening" }, icon: Lock, skills: ["Hardening", "IDS/IPS", "Analyse de vulnérabilités", "Pare-feu"], color: "from-primary/15 to-secondary/10" },
+  { title: { fr: "AWS Cloud", en: "AWS Cloud" }, icon: Cloud, skills: ["EC2", "S3", "IAM", "VPC", "CloudWatch"], color: "from-primary/20 to-accent/10" },
+  { title: { fr: "Monitoring & Logs", en: "Monitoring & Logs" }, icon: Activity, skills: ["Syslog", "Wireshark", "Nmap", "SIEM", "Bash"], color: "from-primary/10 to-secondary/10" },
+  { title: { fr: "Data & Analyse des Risques", en: "Data & Risk Analysis" }, icon: TrendingUp, skills: ["Power BI", "Analyse financière", "Gestion des risques"], color: "from-accent/20 to-accent/5" },
 ];
 
 const SkillsAboutSection = () => {

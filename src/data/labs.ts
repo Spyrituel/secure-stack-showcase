@@ -22,16 +22,16 @@ export const labs: Lab[] = [
     icon: Shield,
     progress: 73,
     title: {
-      fr: "Linux & Administration Système",
-      en: "Linux & System Administration",
+      fr: "Analyse de journaux système sous Linux",
+      en: "Linux System Log Analysis",
     },
     shortDesc: {
-      fr: "Analyse et gestion de journaux système sous Linux afin de détecter des comportements suspects et comprendre le fonctionnement des logs système.",
-      en: "Analysis and management of Linux system logs to detect suspicious behavior and understand system log operations.",
+      fr: "Analyse des logs système pour détecter des comportements suspects et configurer le monitoring automatisé.",
+      en: "Analyzed system logs to detect suspicious behavior and configured automated monitoring.",
     },
     fullDesc: {
-      fr: "Ce lab porte sur l'analyse approfondie des journaux système sous Linux. L'objectif est de maîtriser les outils de gestion des logs pour détecter des comportements anormaux et comprendre le fonctionnement interne du système d'exploitation.",
-      en: "This lab focuses on in-depth analysis of Linux system logs. The goal is to master log management tools to detect abnormal behavior and understand the internal workings of the operating system.",
+      fr: "Analyse approfondie des journaux système Linux : maîtrise des outils de gestion des logs, détection de comportements anormaux et mise en place de scripts de monitoring.",
+      en: "In-depth Linux system log analysis: mastering log management tools, detecting abnormal behavior and setting up monitoring scripts.",
     },
     objectives: {
       fr: [
@@ -69,7 +69,7 @@ export const labs: Lab[] = [
         "Created a log monitoring script",
       ],
     },
-    tech: ["Linux", "Kali Linux", "grep", "cat", "head", "tail", "syslog", "journalctl"],
+    tech: ["Linux", "Kali Linux", "grep", "syslog", "journalctl"],
   },
   {
     id: "lab-2",
@@ -77,16 +77,16 @@ export const labs: Lab[] = [
     icon: Network,
     progress: 93,
     title: {
-      fr: "Reconnaissance Réseau & Sniffing",
-      en: "Network Reconnaissance & Sniffing",
+      fr: "Cartographie et sniffing réseau",
+      en: "Network Mapping & Sniffing",
     },
     shortDesc: {
-      fr: "Cartographie d'une infrastructure réseau virtuelle et analyse du trafic réseau afin d'identifier les services actifs et les données transmises sur le réseau.",
-      en: "Mapping a virtual network infrastructure and analyzing network traffic to identify active services and transmitted data.",
+      fr: "Cartographie d'un réseau virtuel et capture de trafic pour identifier services actifs et données sensibles en transit.",
+      en: "Mapped a virtual network and captured traffic to identify active services and sensitive data in transit.",
     },
     fullDesc: {
-      fr: "Ce lab explore les techniques de reconnaissance réseau et d'analyse de trafic. Il couvre la cartographie complète d'une infrastructure réseau virtuelle, l'identification des services actifs et l'interception du trafic pour analyse.",
-      en: "This lab explores network reconnaissance and traffic analysis techniques. It covers complete mapping of a virtual network infrastructure, identification of active services, and traffic interception for analysis.",
+      fr: "Reconnaissance réseau complète : cartographie d'infrastructure, identification des services actifs et interception du trafic pour analyse de sécurité.",
+      en: "Complete network reconnaissance: infrastructure mapping, active service identification, and traffic interception for security analysis.",
     },
     objectives: {
       fr: [
@@ -124,7 +124,7 @@ export const labs: Lab[] = [
         "Network vulnerability report",
       ],
     },
-    tech: ["Nmap", "Wireshark", "tcpdump", "nslookup", "dig", "curl"],
+    tech: ["Nmap", "Wireshark", "tcpdump", "nslookup"],
   },
   {
     id: "lab-3",
@@ -132,16 +132,16 @@ export const labs: Lab[] = [
     icon: Flame,
     progress: 67,
     title: {
-      fr: "Défense Active : Firewall / IDS / SIEM",
-      en: "Active Defense: Firewall / IDS / SIEM",
+      fr: "Déploiement pare-feu et IDS/IPS",
+      en: "Firewall & IDS/IPS Deployment",
     },
     shortDesc: {
-      fr: "Mise en place de mécanismes de défense réseau incluant un pare-feu et un système de détection d'intrusion afin d'identifier les activités suspectes.",
-      en: "Implementation of network defense mechanisms including a firewall and intrusion detection system to identify suspicious activities.",
+      fr: "Configuration d'un pare-feu pfSense, déploiement de Snort IDS et intégration SIEM pour la corrélation d'événements.",
+      en: "Configured pfSense firewall, deployed Snort IDS and integrated SIEM for event correlation.",
     },
     fullDesc: {
-      fr: "Ce lab couvre la mise en place d'une infrastructure de défense réseau complète. Il inclut la configuration d'un pare-feu, le déploiement d'un IDS Snort et l'intégration avec un SIEM pour la corrélation d'événements.",
-      en: "This lab covers the setup of a complete network defense infrastructure. It includes firewall configuration, Snort IDS deployment, and integration with a SIEM for event correlation.",
+      fr: "Infrastructure de défense réseau complète : pare-feu, IDS Snort et intégration avec un SIEM pour la détection et la corrélation d'événements de sécurité.",
+      en: "Complete network defense infrastructure: firewall, Snort IDS and SIEM integration for security event detection and correlation.",
     },
     objectives: {
       fr: [
@@ -178,7 +178,7 @@ export const labs: Lab[] = [
         "Operational SIEM dashboard",
       ],
     },
-    tech: ["Snort", "Firewall rules", "IDS/IPS", "SIEM"],
+    tech: ["Snort", "pfSense", "IDS/IPS", "SIEM"],
   },
   {
     id: "lab-4",
@@ -186,16 +186,16 @@ export const labs: Lab[] = [
     icon: Bug,
     progress: 100,
     title: {
-      fr: "Menaces, Attaques & Vulnérabilités",
-      en: "Threats, Attacks & Vulnerabilities",
+      fr: "Étude des menaces et vulnérabilités",
+      en: "Threat & Vulnerability Study",
     },
     shortDesc: {
-      fr: "Étude des menaces informatiques, des vulnérabilités et des techniques d'attaque afin de comprendre les méthodes utilisées par les cybercriminels.",
-      en: "Study of cyber threats, vulnerabilities, and attack techniques to understand methods used by cybercriminals.",
+      fr: "Analyse de CVE, exploitation de failles OWASP Top 10 et rédaction d'un rapport de threat intelligence.",
+      en: "Analyzed CVEs, exploited OWASP Top 10 flaws and wrote a threat intelligence report.",
     },
     fullDesc: {
-      fr: "Ce lab propose une étude complète du paysage des menaces informatiques. Il couvre l'analyse des vulnérabilités connues (CVE), les méthodologies d'attaque et les frameworks de threat intelligence.",
-      en: "This lab provides a comprehensive study of the cyber threat landscape. It covers analysis of known vulnerabilities (CVE), attack methodologies, and threat intelligence frameworks.",
+      fr: "Étude complète du paysage des menaces : analyse de vulnérabilités CVE, exploitation de failles OWASP Top 10 et rédaction de rapports de threat intelligence.",
+      en: "Complete threat landscape study: CVE vulnerability analysis, OWASP Top 10 exploitation and threat intelligence reporting.",
     },
     objectives: {
       fr: [
@@ -240,16 +240,16 @@ export const labs: Lab[] = [
     icon: Lock,
     progress: 100,
     title: {
-      fr: "Architecture de Sécurité & Contrôles d'Accès",
-      en: "Security Architecture & Access Controls",
+      fr: "Conception d'architecture de sécurité",
+      en: "Security Architecture Design",
     },
     shortDesc: {
-      fr: "Conception d'une architecture de sécurité robuste avec des mécanismes d'authentification avancés et des contrôles d'accès adaptés aux environnements professionnels.",
-      en: "Designing a robust security architecture with advanced authentication mechanisms and access controls suited for professional environments.",
+      fr: "Conception Zero Trust, déploiement MFA et mise en place de contrôles d'accès RBAC en environnement Active Directory.",
+      en: "Zero Trust design, MFA deployment and RBAC access controls in Active Directory environment.",
     },
     fullDesc: {
-      fr: "Ce lab aborde la conception d'architectures de sécurité d'entreprise. Il couvre les mécanismes d'authentification multi-facteurs, les contrôles d'accès basés sur les rôles et la mise en place de politiques de sécurité.",
-      en: "This lab covers enterprise security architecture design. It includes multi-factor authentication mechanisms, role-based access controls, and security policy implementation.",
+      fr: "Conception d'architecture de sécurité d'entreprise : authentification multi-facteurs, contrôles d'accès RBAC et politiques de sécurité Zero Trust.",
+      en: "Enterprise security architecture design: multi-factor authentication, RBAC access controls and Zero Trust security policies.",
     },
     objectives: {
       fr: [
@@ -285,7 +285,7 @@ export const labs: Lab[] = [
         "Complete RBAC matrix",
       ],
     },
-    tech: ["MFA", "Authentication systems", "Security architecture"],
+    tech: ["MFA", "Active Directory", "Zero Trust", "RBAC"],
   },
   {
     id: "lab-6",
@@ -293,16 +293,16 @@ export const labs: Lab[] = [
     icon: Key,
     progress: 100,
     title: {
-      fr: "Cryptographie & Solutions Sécurisées",
-      en: "Cryptography & Secure Solutions",
+      fr: "Implémentation de mécanismes de chiffrement",
+      en: "Encryption Mechanism Implementation",
     },
     shortDesc: {
-      fr: "Étude et implémentation des mécanismes de chiffrement et de hachage afin de sécuriser les communications et protéger les données.",
-      en: "Study and implementation of encryption and hashing mechanisms to secure communications and protect data.",
+      fr: "Chiffrement AES/RSA en Python, analyse de fonctions de hachage et sécurisation de communications TLS.",
+      en: "AES/RSA encryption in Python, hash function analysis and TLS communication security.",
     },
     fullDesc: {
-      fr: "Ce lab explore les fondamentaux de la cryptographie appliquée. Il couvre les algorithmes de chiffrement symétrique et asymétrique, les fonctions de hachage et leur implémentation pratique en Python.",
-      en: "This lab explores the fundamentals of applied cryptography. It covers symmetric and asymmetric encryption algorithms, hash functions, and their practical implementation in Python.",
+      fr: "Cryptographie appliquée : algorithmes symétriques et asymétriques (AES, RSA), fonctions de hachage (SHA-256) et sécurisation de communications avec TLS.",
+      en: "Applied cryptography: symmetric and asymmetric algorithms (AES, RSA), hash functions (SHA-256) and communication security with TLS.",
     },
     objectives: {
       fr: [
@@ -340,6 +340,6 @@ export const labs: Lab[] = [
         "Established secure TLS communication",
       ],
     },
-    tech: ["AES", "DES", "RSA", "Python", "MD5", "Cryptography"],
+    tech: ["AES", "RSA", "Python", "TLS", "SHA-256"],
   },
 ];

@@ -1,7 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { motion } from "framer-motion";
-import { Shield, Server, Network, TrendingUp } from "lucide-react";
+import { Shield, Server, Network, TrendingUp, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   const { lang, t } = useLanguage();
@@ -56,7 +57,7 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {highlights.map((h, i) => (
                 <motion.div
                   key={i}
@@ -72,6 +73,16 @@ const AboutSection = () => {
                   </span>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-sm font-heading font-medium text-primary hover:underline"
+              >
+                {t(translations.about.ctaFull)}
+                <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </motion.div>
