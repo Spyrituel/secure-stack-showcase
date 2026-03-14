@@ -32,8 +32,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.title = lang === "fr"
-      ? "Portfolio Cybersécurité – Alaeddine Hamadouche"
-      : "Cybersecurity Portfolio – Alaeddine Hamadouche";
+      ? "Alae Portfolio – Cybersécurité"
+      : "Alae Portfolio – Cybersecurity";
 
     // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
