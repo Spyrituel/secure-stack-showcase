@@ -183,7 +183,7 @@ const HeroSection = () => {
           <a
             href="/cv-finance-alaeddine-hamadouche.pdf"
             download
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-primary transition-all duration-300 gradient-border w-full sm:w-auto"
           >
             <Download size={16} />
             {t(translations.hero.cta2)}
