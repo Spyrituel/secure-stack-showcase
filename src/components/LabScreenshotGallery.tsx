@@ -71,17 +71,6 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     if (files.length === 0) return;
 
     setUploadMessage("");
-
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    if (!user) {
-      setUploadMessage(lang === "fr" ? "Connectez-vous pour importer des captures." : "Sign in to import screenshots.");
-      event.target.value = "";
-      return;
-    }
-
     setIsUploading(true);
 
     const startOrder = allScreenshots.length;
