@@ -1,4 +1,5 @@
 import { Globe, Server, HardDrive, Network, ShieldCheck, Activity } from "lucide-react";
+import type { LabScreenshot } from "@/data/labs";
 
 export interface AwsService {
   name: string;
@@ -20,6 +21,7 @@ export interface AwsLab {
   commands: string[];
   results: { fr: string[]; en: string[] };
   tech: string[];
+  screenshots?: LabScreenshot[];
 }
 
 export const awsServices: AwsService[] = [
