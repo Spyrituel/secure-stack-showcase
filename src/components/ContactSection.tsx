@@ -172,19 +172,10 @@ const ContactSection = () => {
               </motion.a>
             ))}
 
-            <motion.a
-              href="/cv-finance-alaeddine-hamadouche.pdf"
-              download
-              whileHover={{ x: 6 }}
-              className="glass rounded-xl p-5 flex items-center gap-4 group border border-primary/30 hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
-                <Download size={20} />
-              </div>
-              <span className="text-sm font-heading font-medium text-foreground">
-                {t(translations.contact.downloadCV)}
-              </span>
-            </motion.a>
+            <CVDropdown
+              className="w-full"
+              buttonClassName="glass rounded-xl p-5 flex items-center gap-4 w-full border border-primary/30 hover:border-primary/50 transition-all duration-300 text-sm font-heading font-medium text-foreground"
+            />
           </motion.div>
         </div>
       </div>
