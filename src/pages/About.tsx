@@ -8,6 +8,7 @@ import {
   GraduationCap, Award, ArrowRight, Mail, Linkedin, Download, Send,
   User, BookOpen, Lock, Activity
 } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { toast } from "sonner";
