@@ -33,7 +33,7 @@ const QuickSkillsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
               whileHover={{ y: -3, boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" }}
-              className="glass rounded-xl px-5 py-3 flex items-center gap-2.5 gradient-border cursor-default group"
+              className="glass rounded-xl px-3 sm:px-5 py-2.5 sm:py-3 flex items-center gap-2 gradient-border cursor-default group"
             >
               <span className="text-primary shrink-0 group-hover:scale-110 transition-transform duration-200">
                 <TechIcon name={skill.tech} size={18} />

@@ -164,7 +164,7 @@ const ContactSection = () => {
                 <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
                   <item.icon size={20} />
                 </div>
-                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors flex-1">
+                <span className="text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors flex-1 break-all sm:break-normal">
                   {item.label}
                 </span>
                 <ArrowUpRight size={16} className="text-muted-foreground/50 group-hover:text-primary transition-colors" />

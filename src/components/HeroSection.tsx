@@ -190,7 +190,7 @@ const HeroSection = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-heading font-semibold text-sm glass text-foreground hover:text-accent transition-all duration-300 w-full sm:w-auto"
           >
             <Mail size={16} />
             {t(translations.hero.cta3)}
