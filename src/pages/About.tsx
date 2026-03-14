@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import CyberBackground from "@/components/CyberBackground";
 import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -11,7 +12,6 @@ import {
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
 import { toast } from "sonner";
 
 const stagger = {
@@ -658,7 +658,9 @@ const ContactAboutSection = () => {
 /* ═══════════════════════════════════════════
    PAGE
    ═══════════════════════════════════════════ */
-const About = () => (
+const About = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  return (
   <div className="relative min-h-screen overflow-x-hidden">
     <CyberBackground />
     <Navbar />
@@ -668,6 +670,7 @@ const About = () => (
       © {new Date().getFullYear()} Alaeddine Hamadouche — Portfolio
     </footer>
   </div>
-);
+  );
+};
 
 export default About;
