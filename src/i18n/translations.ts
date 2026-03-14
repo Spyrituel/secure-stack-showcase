@@ -99,7 +99,7 @@ export const translations = {
     title: { fr: "Formation & Parcours", en: "Education & Background" },
     items: [
       {
-        year: "2024 – 2026",
+        year: "Nov. 2025 – 2028",
         title: {
           fr: "AEC — Gestion de Systèmes et Réseaux Informatiques",
           en: "AEC — IT Systems and Network Management",
