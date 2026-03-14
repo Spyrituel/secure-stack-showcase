@@ -43,7 +43,8 @@ const LabDetail = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <CyberBackground />
-      <div className="relative z-10">
+      <Navbar />
+      <div className="relative z-10 pt-20">
         {/* Header */}
         <div className="glass border-b border-border">
           <div className="container mx-auto max-w-4xl px-6 py-4">
