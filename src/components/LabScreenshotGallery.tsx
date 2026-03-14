@@ -78,7 +78,7 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
     const results = await Promise.all(
       files.map(async (file, index) => {
         const safeName = file.name.toLowerCase().replace(/[^a-z0-9._-]/g, "-");
-        const objectPath = `${user.id}/${labSlug}/${Date.now()}-${index}-${safeName}`;
+        const objectPath = `public/${labSlug}/${Date.now()}-${index}-${safeName}`;
 
         const { error: uploadError } = await supabase.storage.from("lab-screenshots").upload(objectPath, file, {
           cacheControl: "3600",
