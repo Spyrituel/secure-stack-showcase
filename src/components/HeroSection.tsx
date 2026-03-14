@@ -203,7 +203,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2, duration: 0.8 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2"
       >
         <a href="#about" className="flex flex-col items-center gap-2 group">
           <motion.div
