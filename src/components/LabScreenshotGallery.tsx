@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, ZoomIn, X, ChevronLeft, ChevronRight, Upload, Loader2 } from "lucide-react";
+import { Camera, ZoomIn, X, ChevronLeft, ChevronRight, Upload, Loader2, Video } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { LabScreenshot } from "@/data/labs";
 import { Button } from "@/components/ui/button";
@@ -10,11 +10,12 @@ import type { Tables } from "@/integrations/supabase/types";
 interface LabScreenshotGalleryProps {
   screenshots: LabScreenshot[];
   labSlug: string;
+  videoUrl?: string;
 }
 
 type LabScreenshotRow = Tables<"lab_screenshots">;
 
-const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProps) => {
+const LabScreenshotGallery = ({ screenshots, labSlug, videoUrl }: LabScreenshotGalleryProps) => {
   const { lang, t } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [uploadedScreenshots, setUploadedScreenshots] = useState<LabScreenshot[]>([]);
@@ -169,6 +170,30 @@ const LabScreenshotGallery = ({ screenshots, labSlug }: LabScreenshotGalleryProp
         </div>
 
         {uploadMessage && <p className="text-xs text-primary mb-3">{uploadMessage}</p>}
+
+        {videoUrl && (
+          <a
+            href={videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 mb-4 p-4 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 group"
+          >
+            <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+              <Video size={22} />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-foreground">
+                {lang === "fr" ? "Vidéo de démonstration" : "Demo Video"}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {lang === "fr" ? "Voir la démonstration complète du laboratoire" : "Watch the full lab demonstration"}
+              </p>
+            </div>
+            <span className="text-xs text-primary font-mono opacity-70 group-hover:opacity-100 transition-opacity">
+              ↗
+            </span>
+          </a>
+        )}
 
         {allScreenshots.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

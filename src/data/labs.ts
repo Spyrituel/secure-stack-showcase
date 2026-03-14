@@ -20,6 +20,7 @@ export interface Lab {
   results: { fr: string[]; en: string[] };
   tech: string[];
   screenshots?: LabScreenshot[];
+  videoUrl?: string;
 }
 
 export const labs: Lab[] = [
@@ -236,6 +237,7 @@ export const labs: Lab[] = [
       ],
     },
     tech: ["Snort", "pfSense", "IDS/IPS", "SIEM"],
+    videoUrl: "https://kdrive.infomaniak.com/app/share/2018516/c0cfe813-c98d-4f8c-b0db-c85619642a6f/files/54",
   },
   {
     id: "lab-4",
