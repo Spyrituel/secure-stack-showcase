@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "pwa-icon-192.png", "pwa-icon-512.png"],
+      includeAssets: ["favicon.png", "apple-touch-icon.png", "pwa-icon-192.png", "pwa-icon-512.png"],
       workbox: {
         navigateFallbackDenylist: [/^\/~oauth/, /\.pdf$/],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
